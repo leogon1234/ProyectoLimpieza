@@ -1,255 +1,278 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tienda de Limpieza - Productos</title>
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
-  </head>
-  <body>
-    <header class="d-flex justify-content-between align-items-center px-3 py-2" style="background: #2a9d8f; color: white;">
-      <div>
-        <h1 class="mb-0" style="font-size:1.5rem;">Tienda de Limpieza</h1>
-      </div>
-      <nav>
-        <ul class="nav">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active" href="Productos.html">Productos</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Ofertas.html">Ofertas</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="Contacto.html">Contacto</a>
-          </li>
-        </ul>
-      </nav>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tienda de Limpieza - Productos</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+  <header class="d-flex justify-content-between align-items-center px-3 py-2"
+    style="background: #2a9d8f; color: white;">
+    <div>
+      <h1 class="mb-0" style="font-size:1.5rem;">Tienda de Limpieza</h1>
+    </div>
+    <nav class="mx-auto">
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="Productos.html">Productos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Ofertas.html">Ofertas</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Contacto.html">Contacto</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="d-flex align-items-center gap-2">
+      <a href="usuario.html" class="btn btn-light" title="Mi cuenta">
+        <i class="bi bi-person"></i>
+      </a>
       <a href="carrito.html" class="btn btn-light position-relative" id="carrito-header-btn">
         <i class="bi bi-cart"></i>
         <span>Carrito</span>
-        <span class="badge bg-danger position-absolute top-0 start-100 translate-middle" id="carrito-contador" style="font-size:0.9rem;">0</span>
+        <span class="badge bg-danger position-absolute top-0 start-100 translate-middle" id="carrito-contador"
+          style="font-size:0.9rem;">0</span>
       </a>
-    </header>
+    </div>
+  </header>
 
-    <main class="container my-4">
-      <section class="row g-4">
-        <!-- Producto 1 -->
-          <div class="col-md-4">
-            <a href="detalle-producto.html?id=1" style="text-decoration:none;color:inherit;">
-              <div class="card h-100 shadow-sm position-relative">
-                <img src="img/Detergente.jpg" class="card-img-top" alt="Detergente" />
-                <div class="card-body text-center">
-                  <h5 class="card-title">Detergente Líquido</h5>
-                  <p class="card-text">Ideal para ropa y superficies.</p>
-                  <span class="precio">$5.990</span>
-                  <button class="btn btn-success mt-2" onclick="event.preventDefault(); agregarAlCarrito(1);">Agregar al carrito</button>
+  <main class="container my-4">
+    <section class="row g-4">
+      <!-- Producto 1 -->
+      <div class="col-md-4">
+        <a href="detalle-producto.html?id=1" style="text-decoration:none;color:inherit;">
+          <div class="card h-100 shadow-sm position-relative">
+            <img src="img/Detergente.jpg" class="card-img-top" alt="Detergente" />
+            <div class="card-body text-center">
+              <h5 class="card-title">Detergente Líquido</h5>
+              <p class="card-text">Ideal para ropa y superficies.</p>
+              <span class="precio">$5.990</span>
+              <button class="btn btn-success mt-2" onclick="event.preventDefault(); agregarAlCarrito(1);">Agregar al
+                carrito</button>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Producto 2 (Oferta) -->
+      <div class="col-md-4">
+        <a href="detalle-producto.html?id=2" style="text-decoration:none;color:inherit;">
+          <div class="card h-100 shadow-sm position-relative">
+            <span class="badge-sale">Sale</span>
+            <img src="img/Cloro.jpg" class="card-img-top" alt="Cloro" />
+            <div class="card-body text-center d-flex flex-column justify-content-between h-100">
+              <div>
+                <h5 class="card-title">Cloro Desinfectante</h5>
+                <p class="card-text">Elimina el 99.9% de bacterias.</p>
+                <div class="precios-oferta">
+                  <span class="precio-oferta">$2.000</span>
+                  <span class="precio-tachado">$2.500</span>
                 </div>
               </div>
-            </a>
+              <button class="btn btn-success mt-3" onclick="event.preventDefault(); agregarAlCarrito(2);">Agregar al
+                carrito</button>
+            </div>
           </div>
+        </a>
+      </div>
 
-        <!-- Producto 2 (Oferta) -->
-          <div class="col-md-4">
-            <a href="detalle-producto.html?id=2" style="text-decoration:none;color:inherit;">
-              <div class="card h-100 shadow-sm position-relative">
-                <span class="badge-sale">Sale</span>
-                <img src="img/Cloro.jpg" class="card-img-top" alt="Cloro" />
-                <div class="card-body text-center d-flex flex-column justify-content-between h-100">
-                  <div>
-                    <h5 class="card-title">Cloro Desinfectante</h5>
-                    <p class="card-text">Elimina el 99.9% de bacterias.</p>
-                    <div class="precios-oferta">
-                      <span class="precio-oferta">$2.000</span>
-                      <span class="precio-tachado">$2.500</span>
-                    </div>
-                  </div>
-                  <button class="btn btn-success mt-3" onclick="event.preventDefault(); agregarAlCarrito(2);">Agregar al carrito</button>
+      <!-- Producto 3 -->
+      <div class="col-md-4">
+        <a href="detalle-producto.html?id=3" style="text-decoration:none;color:inherit;">
+          <div class="card h-100 shadow-sm position-relative">
+            <img src="img/escoba.jpg" class="card-img-top" alt="Escoba" />
+            <div class="card-body text-center">
+              <h5 class="card-title">Escoba Multiuso</h5>
+              <p class="card-text">Perfecta para interiores y exteriores.</p>
+              <span class="precio">$3.500</span>
+              <button class="btn btn-success mt-2" onclick="event.preventDefault(); agregarAlCarrito(3);">Agregar al
+                carrito</button>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Producto 4 (Oferta) -->
+      <div class="col-md-4">
+        <a href="detalle-producto.html?id=4" style="text-decoration:none;color:inherit;">
+          <div class="card h-100 shadow-sm position-relative">
+            <span class="badge-sale">Sale</span>
+            <img src="img/guantes.jpg" class="card-img-top" alt="Guantes" />
+            <div class="card-body text-center d-flex flex-column justify-content-between h-100">
+              <div>
+                <h5 class="card-title">Guantes de Limpieza</h5>
+                <p class="card-text">Protección para tus manos.</p>
+                <div class="precios-oferta">
+                  <span class="precio-oferta">$1.200</span>
+                  <span class="precio-tachado">$1.500</span>
                 </div>
               </div>
-            </a>
+              <button class="btn btn-success mt-3" onclick="event.preventDefault(); agregarAlCarrito(4);">Agregar al
+                carrito</button>
+            </div>
           </div>
+        </a>
+      </div>
 
-        <!-- Producto 3 -->
-          <div class="col-md-4">
-            <a href="detalle-producto.html?id=3" style="text-decoration:none;color:inherit;">
-              <div class="card h-100 shadow-sm position-relative">
-                <img src="img/escoba.jpg" class="card-img-top" alt="Escoba" />
-                <div class="card-body text-center">
-                  <h5 class="card-title">Escoba Multiuso</h5>
-                  <p class="card-text">Perfecta para interiores y exteriores.</p>
-                  <span class="precio">$3.500</span>
-                  <button class="btn btn-success mt-2" onclick="event.preventDefault(); agregarAlCarrito(3);">Agregar al carrito</button>
+      <!-- Producto 5 -->
+      <div class="col-md-4">
+        <a href="detalle-producto.html?id=5" style="text-decoration:none;color:inherit;">
+          <div class="card h-100 shadow-sm position-relative">
+            <img src="img/esponja.jpg" class="card-img-top" alt="Esponja" />
+            <div class="card-body text-center">
+              <h5 class="card-title">Esponja Multiuso</h5>
+              <p class="card-text">Ideal para cocina y baño.</p>
+              <span class="precio">$800</span>
+              <button class="btn btn-success mt-2" onclick="event.preventDefault(); agregarAlCarrito(5);">Agregar al
+                carrito</button>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Producto 6 (Oferta) -->
+      <div class="col-md-4">
+        <a href="detalle-producto.html?id=6" style="text-decoration:none;color:inherit;">
+          <div class="card h-100 shadow-sm position-relative">
+            <span class="badge-sale">Sale</span>
+            <img src="img/limpiavidrios.jpg" class="card-img-top" alt="Limpiavidrios" />
+            <div class="card-body text-center d-flex flex-column justify-content-between h-100">
+              <div>
+                <h5 class="card-title">Limpiavidrios</h5>
+                <p class="card-text">Brillo sin manchas.</p>
+                <div class="precios-oferta">
+                  <span class="precio-oferta">$2.500</span>
+                  <span class="precio-tachado">$3.000</span>
                 </div>
               </div>
-            </a>
+              <button class="btn btn-success mt-3" onclick="event.preventDefault(); agregarAlCarrito(6);">Agregar al
+                carrito</button>
+            </div>
           </div>
+        </a>
+      </div>
 
-        <!-- Producto 4 (Oferta) -->
-          <div class="col-md-4">
-            <a href="detalle-producto.html?id=4" style="text-decoration:none;color:inherit;">
-              <div class="card h-100 shadow-sm position-relative">
-                <span class="badge-sale">Sale</span>
-                <img src="img/guantes.jpg" class="card-img-top" alt="Guantes" />
-                <div class="card-body text-center d-flex flex-column justify-content-between h-100">
-                  <div>
-                    <h5 class="card-title">Guantes de Limpieza</h5>
-                    <p class="card-text">Protección para tus manos.</p>
-                    <div class="precios-oferta">
-                      <span class="precio-oferta">$1.200</span>
-                      <span class="precio-tachado">$1.500</span>
-                    </div>
-                  </div>
-                  <button class="btn btn-success mt-3" onclick="event.preventDefault(); agregarAlCarrito(4);">Agregar al carrito</button>
+      <!-- Producto 7 -->
+      <div class="col-md-4">
+        <a href="detalle-producto.html?id=7" style="text-decoration:none;color:inherit;">
+          <div class="card h-100 shadow-sm position-relative">
+            <img src="img/trapo.jpg" class="card-img-top" alt="Trapo" />
+            <div class="card-body text-center">
+              <h5 class="card-title">Trapo de Piso</h5>
+              <p class="card-text">Absorbente y resistente.</p>
+              <span class="precio">$1.000</span>
+              <button class="btn btn-success mt-2" onclick="event.preventDefault(); agregarAlCarrito(7);">Agregar al
+                carrito</button>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Producto 8 -->
+      <div class="col-md-4">
+        <a href="detalle-producto.html?id=8" style="text-decoration:none;color:inherit;">
+          <div class="card h-100 shadow-sm position-relative">
+            <img src="img/escobillon.jpg" class="card-img-top" alt="Escobillón" />
+            <div class="card-body text-center">
+              <h5 class="card-title">Escobillón</h5>
+              <p class="card-text">Cerdas resistentes para exteriores.</p>
+              <span class="precio">$2.200</span>
+              <button class="btn btn-success mt-2" onclick="event.preventDefault(); agregarAlCarrito(8);">Agregar al
+                carrito</button>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Producto 9 (Oferta) -->
+      <div class="col-md-4">
+        <a href="detalle-producto.html?id=9" style="text-decoration:none;color:inherit;">
+          <div class="card h-100 shadow-sm position-relative">
+            <span class="badge-sale">Sale</span>
+            <img src="img/limpiapisos.jpg" class="card-img-top" alt="Limpiapisos" />
+            <div class="card-body text-center d-flex flex-column justify-content-between h-100">
+              <div>
+                <h5 class="card-title">Limpiapisos</h5>
+                <p class="card-text">Fragancia duradera.</p>
+                <div class="precios-oferta">
+                  <span class="precio-oferta">$3.000</span>
+                  <span class="precio-tachado">$3.500</span>
                 </div>
               </div>
-            </a>
+              <button class="btn btn-success mt-3" onclick="event.preventDefault(); agregarAlCarrito(9);">Agregar al
+                carrito</button>
+            </div>
           </div>
+        </a>
+      </div>
 
-        <!-- Producto 5 -->
-          <div class="col-md-4">
-            <a href="detalle-producto.html?id=5" style="text-decoration:none;color:inherit;">
-              <div class="card h-100 shadow-sm position-relative">
-                <img src="img/esponja.jpg" class="card-img-top" alt="Esponja" />
-                <div class="card-body text-center">
-                  <h5 class="card-title">Esponja Multiuso</h5>
-                  <p class="card-text">Ideal para cocina y baño.</p>
-                  <span class="precio">$800</span>
-                  <button class="btn btn-success mt-2" onclick="event.preventDefault(); agregarAlCarrito(5);">Agregar al carrito</button>
+      <!-- Producto 10 -->
+      <div class="col-md-4">
+        <a href="detalle-producto.html?id=10" style="text-decoration:none;color:inherit;">
+          <div class="card h-100 shadow-sm position-relative">
+            <img src="img/cepillo.jpg" class="card-img-top" alt="Cepillo" />
+            <div class="card-body text-center">
+              <h5 class="card-title">Cepillo de Limpieza</h5>
+              <p class="card-text">Ideal para superficies difíciles.</p>
+              <span class="precio">$1.800</span>
+              <button class="btn btn-success mt-2" onclick="event.preventDefault(); agregarAlCarrito(10);">Agregar al
+                carrito</button>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Producto 11 -->
+      <div class="col-md-4">
+        <a href="detalle-producto.html?id=11" style="text-decoration:none;color:inherit;">
+          <div class="card h-100 shadow-sm position-relative">
+            <img src="img/bolsas.jpg" class="card-img-top" alt="Bolsas" />
+            <div class="card-body text-center">
+              <h5 class="card-title">Bolsas de Basura</h5>
+              <p class="card-text">Resistentes y prácticas.</p>
+              <span class="precio">$1.500</span>
+              <button class="btn btn-success mt-2" onclick="event.preventDefault(); agregarAlCarrito(11);">Agregar al
+                carrito</button>
+            </div>
+          </div>
+        </a>
+      </div>
+
+      <!-- Producto 12 (Oferta) -->
+      <div class="col-md-4">
+        <a href="detalle-producto.html?id=12" style="text-decoration:none;color:inherit;">
+          <div class="card h-100 shadow-sm position-relative">
+            <span class="badge-sale">Sale</span>
+            <img src="img/limpiador-multiuso.jpg" class="card-img-top" alt="Limpiador Multiuso" />
+            <div class="card-body text-center d-flex flex-column justify-content-between h-100">
+              <div>
+                <h5 class="card-title">Limpiador Multiuso</h5>
+                <p class="card-text">Eficaz en todas las superficies.</p>
+                <div class="precios-oferta">
+                  <span class="precio-oferta">$2.800</span>
+                  <span class="precio-tachado">$3.200</span>
                 </div>
               </div>
-            </a>
+              <button class="btn btn-success mt-3" onclick="event.preventDefault(); agregarAlCarrito(12);">Agregar al
+                carrito</button>
+            </div>
           </div>
-
-        <!-- Producto 6 (Oferta) -->
-          <div class="col-md-4">
-            <a href="detalle-producto.html?id=6" style="text-decoration:none;color:inherit;">
-              <div class="card h-100 shadow-sm position-relative">
-                <span class="badge-sale">Sale</span>
-                <img src="img/limpiavidrios.jpg" class="card-img-top" alt="Limpiavidrios" />
-                <div class="card-body text-center d-flex flex-column justify-content-between h-100">
-                  <div>
-                    <h5 class="card-title">Limpiavidrios</h5>
-                    <p class="card-text">Brillo sin manchas.</p>
-                    <div class="precios-oferta">
-                      <span class="precio-oferta">$2.500</span>
-                      <span class="precio-tachado">$3.000</span>
-                    </div>
-                  </div>
-                  <button class="btn btn-success mt-3" onclick="event.preventDefault(); agregarAlCarrito(6);">Agregar al carrito</button>
-                </div>
-              </div>
-            </a>
-          </div>
-
-        <!-- Producto 7 -->
-          <div class="col-md-4">
-            <a href="detalle-producto.html?id=7" style="text-decoration:none;color:inherit;">
-              <div class="card h-100 shadow-sm position-relative">
-                <img src="img/trapo.jpg" class="card-img-top" alt="Trapo" />
-                <div class="card-body text-center">
-                  <h5 class="card-title">Trapo de Piso</h5>
-                  <p class="card-text">Absorbente y resistente.</p>
-                  <span class="precio">$1.000</span>
-                  <button class="btn btn-success mt-2" onclick="event.preventDefault(); agregarAlCarrito(7);">Agregar al carrito</button>
-                </div>
-              </div>
-            </a>
-          </div>
-
-        <!-- Producto 8 -->
-          <div class="col-md-4">
-            <a href="detalle-producto.html?id=8" style="text-decoration:none;color:inherit;">
-              <div class="card h-100 shadow-sm position-relative">
-                <img src="img/escobillon.jpg" class="card-img-top" alt="Escobillón" />
-                <div class="card-body text-center">
-                  <h5 class="card-title">Escobillón</h5>
-                  <p class="card-text">Cerdas resistentes para exteriores.</p>
-                  <span class="precio">$2.200</span>
-                  <button class="btn btn-success mt-2" onclick="event.preventDefault(); agregarAlCarrito(8);">Agregar al carrito</button>
-                </div>
-              </div>
-            </a>
-          </div>
-
-        <!-- Producto 9 (Oferta) -->
-          <div class="col-md-4">
-            <a href="detalle-producto.html?id=9" style="text-decoration:none;color:inherit;">
-              <div class="card h-100 shadow-sm position-relative">
-                <span class="badge-sale">Sale</span>
-                <img src="img/limpiapisos.jpg" class="card-img-top" alt="Limpiapisos" />
-                <div class="card-body text-center d-flex flex-column justify-content-between h-100">
-                  <div>
-                    <h5 class="card-title">Limpiapisos</h5>
-                    <p class="card-text">Fragancia duradera.</p>
-                    <div class="precios-oferta">
-                      <span class="precio-oferta">$3.000</span>
-                      <span class="precio-tachado">$3.500</span>
-                    </div>
-                  </div>
-                  <button class="btn btn-success mt-3" onclick="event.preventDefault(); agregarAlCarrito(9);">Agregar al carrito</button>
-                </div>
-              </div>
-            </a>
-          </div>
-
-        <!-- Producto 10 -->
-          <div class="col-md-4">
-            <a href="detalle-producto.html?id=10" style="text-decoration:none;color:inherit;">
-              <div class="card h-100 shadow-sm position-relative">
-                <img src="img/cepillo.jpg" class="card-img-top" alt="Cepillo" />
-                <div class="card-body text-center">
-                  <h5 class="card-title">Cepillo de Limpieza</h5>
-                  <p class="card-text">Ideal para superficies difíciles.</p>
-                  <span class="precio">$1.800</span>
-                  <button class="btn btn-success mt-2" onclick="event.preventDefault(); agregarAlCarrito(10);">Agregar al carrito</button>
-                </div>
-              </div>
-            </a>
-          </div>
-
-        <!-- Producto 11 -->
-          <div class="col-md-4">
-            <a href="detalle-producto.html?id=11" style="text-decoration:none;color:inherit;">
-              <div class="card h-100 shadow-sm position-relative">
-                <img src="img/bolsas.jpg" class="card-img-top" alt="Bolsas" />
-                <div class="card-body text-center">
-                  <h5 class="card-title">Bolsas de Basura</h5>
-                  <p class="card-text">Resistentes y prácticas.</p>
-                  <span class="precio">$1.500</span>
-                  <button class="btn btn-success mt-2" onclick="event.preventDefault(); agregarAlCarrito(11);">Agregar al carrito</button>
-                </div>
-              </div>
-            </a>
-          </div>
-
-        <!-- Producto 12 (Oferta) -->
-          <div class="col-md-4">
-            <a href="detalle-producto.html?id=12" style="text-decoration:none;color:inherit;">
-              <div class="card h-100 shadow-sm position-relative">
-                <span class="badge-sale">Sale</span>
-                <img src="img/limpiador-multiuso.jpg" class="card-img-top" alt="Limpiador Multiuso" />
-                <div class="card-body text-center d-flex flex-column justify-content-between h-100">
-                  <div>
-                    <h5 class="card-title">Limpiador Multiuso</h5>
-                    <p class="card-text">Eficaz en todas las superficies.</p>
-                    <div class="precios-oferta">
-                      <span class="precio-oferta">$2.800</span>
-                      <span class="precio-tachado">$3.200</span>
-                    </div>
-                  </div>
-                  <button class="btn btn-success mt-3" onclick="event.preventDefault(); agregarAlCarrito(12);">Agregar al carrito</button>
-                </div>
-              </div>
-            </a>
-          </div>
-      </section>
-    </main>
+        </a>
+      </div>
+    </section>
+  </main>
 
   <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="js/carrito.js"></script>
-  </body>
+</body>
+
 </html>
