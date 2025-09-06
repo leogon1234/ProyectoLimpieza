@@ -11245,3 +11245,24 @@ body {
 .logo{
     font-size: 1px;
 }
+
+.pie-de-pagina {
+  width: 100%;
+  background-color: #2a9d8f;
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.contacto-footer a {
+  color: rgb(255, 255, 255);
+  text-decoration: underline;
+}
+
+.logo-footer {
+  color: white;
+  text-decoration: underline;
+
+}
+

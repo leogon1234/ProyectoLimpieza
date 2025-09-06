@@ -83,6 +83,3 @@ formulario.addEventListener('submit', function (e) {
     mensajeError.textContent = "Usuario o contraseña incorrectos";
   }
 });
-
-// JD CONTACTO
-
