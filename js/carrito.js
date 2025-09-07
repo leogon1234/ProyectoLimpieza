@@ -22,6 +22,8 @@ if (window.location.pathname.endsWith('carrito.html')) {
     if (!carrito.length) {
       lista.innerHTML = '<p>El carrito está vacío.</p>';
       totalSpan.textContent = '$0';
+      const ivaDiv = document.getElementById('carrito-original-iva');
+      if (ivaDiv) ivaDiv.innerHTML = '';
       return;
     }
     let total = 0;
@@ -37,6 +39,19 @@ if (window.location.pathname.endsWith('carrito.html')) {
     html += '</tbody></table>';
     lista.innerHTML = html;
     totalSpan.textContent = '$' + total.toLocaleString();
+    // Calcular y mostrar IVA (columna, sin recuadro, y el subtotal + iva da el total mostrado)
+    const ivaDiv = document.getElementById('carrito-original-iva');
+    if (ivaDiv) {
+      // El total mostrado es el precio final (con IVA)
+      const subtotal = Math.round(total / 1.19);
+      const iva = total - subtotal;
+          ivaDiv.innerHTML = `
+            <div class="carrito-iva-col">
+              <span class="carrito-iva-item">Subtotal: <b>$${subtotal.toLocaleString()}</b></span>
+              <span class="carrito-iva-item">IVA (19%): <b>$${iva.toLocaleString()}</b></span>
+            </div>
+          `;
+    }
   });
 }
 

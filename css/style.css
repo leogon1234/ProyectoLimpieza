@@ -1,3 +1,43 @@
+/* Enlaces de productos sin subrayado y color heredado */
+.link-producto {
+  text-decoration: none;
+  color: inherit;
+}
+.link-producto:hover, .link-producto:focus {
+  text-decoration: none;
+  color: inherit;
+}
+/* Input cantidad en detalle-producto */
+.input-cantidad {
+  width: 100px;
+  display: inline-block;
+}
+/* Header y carrito estilos extraídos de los HTML */
+.header-tienda {
+  background: #2a9d8f;
+  color: white;
+}
+.header-titulo {
+  font-size: 1.5rem;
+}
+.carrito-contador-badge {
+  font-size: 0.9rem;
+}
+.carrito-iva-text {
+  color: #555;
+  font-size: 0.95rem;
+}
+/* Carrito: Subtotal e IVA en columna */
+.carrito-iva-col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.1em;
+}
+.carrito-iva-item {
+  color: #888;
+  font-size: 1.05em;
+}
 body {
   background-color: #fafafa;
 }
@@ -56,7 +96,7 @@ header h1 {
   margin: 0;
 }
 
-nav .nav-link {
+.nav .nav-link {
   color: white !important;
 }
 
