@@ -1,4 +1,3 @@
-// Simulación de productos
 const productos = [
   {
     id: 1,
@@ -115,7 +114,6 @@ const params = new URLSearchParams(window.location.search);
 const id = parseInt(params.get('id'));
 let producto = productos.find(p => p.id === id) || productos[0];
 
-// Generar ID aleatorio para mostrar
 function generarID() {
   return 'SKU-' + Math.floor(100000 + Math.random() * 900000);
 }

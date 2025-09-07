@@ -94,6 +94,7 @@ header {
 
 header h1 {
   margin: 0;
+  font-size: 1.5rem;
 }
 
 .nav .nav-link {
@@ -149,4 +150,8 @@ header h1 {
   background: #fff;
   padding: 10px;
   display: block;
+}
+
+.span {
+  font-size: 0.9rem;
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,16 +8,18 @@
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
+
 <body>
   <header class="d-flex justify-content-between align-items-center px-3 py-2 header-tienda">
     <div>
-  <h1 class="mb-0 header-titulo">Tienda de Limpieza</h1>
+      <h1 class="mb-0 header-titulo">Tienda de Limpieza</h1>
     </div>
     <nav></nav>
     <a href="carrito.html" class="btn btn-light position-relative" id="carrito-header-btn">
       <i class="bi bi-cart"></i>
       <span>Carrito</span>
-  <span class="badge bg-danger position-absolute top-0 start-100 translate-middle carrito-contador-badge" id="carrito-contador">0</span>
+      <span class="badge bg-danger position-absolute top-0 start-100 translate-middle carrito-contador-badge"
+        id="carrito-contador">0</span>
     </a>
   </header>
   <main class="container detalle-container">
@@ -33,17 +36,17 @@
           <label for="cantidad" class="form-label">Cantidad:</label>
           <input type="number" id="cantidad" class="form-control input-cantidad" value="1" min="1" />
         </div>
-  <button class="btn btn-success" id="btn-agregar-carrito"><i class="bi bi-cart"></i> Agregar al carrito</button>
+        <button class="btn btn-success" id="btn-agregar-carrito"><i class="bi bi-cart"></i> Agregar al carrito</button>
       </div>
     </div>
   </main>
   <script src="js/carrito.js"></script>
   <script src="js/detalle-producto.js"></script>
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function () {
       const params = new URLSearchParams(window.location.search);
       const id = parseInt(params.get('id'));
-      document.getElementById('btn-agregar-carrito').addEventListener('click', function(e) {
+      document.getElementById('btn-agregar-carrito').addEventListener('click', function (e) {
         e.preventDefault();
         const cantidad = Math.max(1, parseInt(document.getElementById('cantidad').value) || 1);
         agregarAlCarritoConCantidad(id, cantidad);
@@ -51,4 +54,5 @@
     });
   </script>
 </body>
+
 </html>
