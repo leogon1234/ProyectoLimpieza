@@ -1,6 +1,6 @@
 // --- Mostrar productos en carrito.html ---
 if (window.location.pathname.endsWith('carrito.html')) {
-  document.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('DOMContentLoaded', function () {
     // Array de productos igual que en detalle-producto.js
     const productos = [
       { id: 1, nombre: "Detergente Líquido", img: "img/Detergente.jpg", precio: 5990, oferta: false, precioOferta: null },
@@ -45,7 +45,7 @@ if (window.location.pathname.endsWith('carrito.html')) {
       // El total mostrado es el precio final (con IVA)
       const subtotal = Math.round(total / 1.19);
       const iva = total - subtotal;
-          ivaDiv.innerHTML = `
+      ivaDiv.innerHTML = `
             <div class="carrito-iva-col">
               <span class="carrito-iva-item">Subtotal: <b>$${subtotal.toLocaleString()}</b></span>
               <span class="carrito-iva-item">IVA (19%): <b>$${iva.toLocaleString()}</b></span>
@@ -56,7 +56,7 @@ if (window.location.pathname.endsWith('carrito.html')) {
 }
 
 // Eliminar producto del carrito
-window.eliminarDelCarrito = function(id) {
+window.eliminarDelCarrito = function (id) {
   let carrito = getCarrito();
   carrito = carrito.filter(item => item.id !== id);
   setCarrito(carrito);
@@ -87,7 +87,7 @@ if (document.readyState === 'loading') {
 }
 
 // --- Lógica para agregar desde Productos.html ---
-window.agregarAlCarrito = function(id) {
+window.agregarAlCarrito = function (id) {
   const carrito = getCarrito();
   const idx = carrito.findIndex(p => p.id === id);
   if (idx >= 0) {
@@ -100,7 +100,7 @@ window.agregarAlCarrito = function(id) {
 };
 
 // --- Lógica para agregar desde detalle-producto.html ---
-window.agregarAlCarritoConCantidad = function(id, cantidad) {
+window.agregarAlCarritoConCantidad = function (id, cantidad) {
   const carrito = getCarrito();
   const idx = carrito.findIndex(p => p.id === id);
   if (idx >= 0) {
