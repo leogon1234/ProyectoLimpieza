@@ -14,7 +14,7 @@
 <body>
   <header class="d-flex justify-content-between align-items-center px-3 py-2 header-tienda">
     <div>
-      <h1 class="mb-0 header-titulo">LimpiFresh</h1>
+      <h1 class="mb-0 header-titulo"><a href="index.html" class="titulo-limpifresh">LimpiFresh</a></h1>
     </div>
     <nav class="mx-auto">
       <ul class="nav justify-content-center">
@@ -42,11 +42,17 @@
       <a href="login.html" class="btn btn-light" title="Mi cuenta">
         <i class="bi bi-person"></i>
       </a>
+      <a href="carrito.html" class="btn btn-light position-relative" id="carrito-header-btn">
+        <i class="bi bi-cart"></i>
+        <span>Carrito</span>
+        <span class="badge bg-danger position-absolute top-0 start-100 translate-middle" id="carrito-contador">0</span>
+      </a>
     </div>
+
   </header>
   <main class="container my-5">
     <div class="text-center">
-  <h2 class="mb-4">¡Bienvenido a Tienda de Limpieza!</h2>
+      <h2 class="mb-4">¡Bienvenido a Tienda de Limpieza!</h2>
       <p class="lead">
         Descubre la mejor selección de productos para la limpieza de tu hogar, oficina o negocio.<br>
         Ofrecemos calidad, buenos precios y atención personalizada para que encuentres todo lo que necesitas en un solo
@@ -63,7 +69,7 @@
             <h5 class="card-title">Detergente Líquido</h5>
             <p class="card-text">Ideal para ropa y superficies.</p>
             <span class="precio">$5.990</span>
-            <button class="btn btn-success">Agregar al carrito</button>
+            <button class="btn btn-success" onclick="agregarAlCarrito(1)">Agregar al carrito</button>
           </div>
         </div>
       </div>
@@ -74,7 +80,7 @@
             <h5 class="card-title">Escoba Multiuso</h5>
             <p class="card-text">Perfecta para interiores y exteriores.</p>
             <span class="precio">$3.500</span>
-            <button class="btn btn-success">Agregar al carrito</button>
+            <button class="btn btn-success" onclick="agregarAlCarrito(3)">Agregar al carrito</button>
           </div>
         </div>
       </div>
@@ -85,13 +91,44 @@
             <h5 class="card-title">Cloro Desinfectante</h5>
             <p class="card-text">Elimina el 99.9% de bacterias.</p>
             <span class="precio">$2.000</span>
-            <button class="btn btn-success">Agregar al carrito</button>
+            <button class="btn btn-success" onclick="agregarAlCarrito(2)">Agregar al carrito</button>
           </div>
         </div>
       </div>
     </section>
   </main>
+  <footer class="bg-light text-center text-lg-start mt-5 border-top">
+    <div class="container p-4">
+      <div class="row justify-content-center">
+        <div class="col-md-4 mb-3 mb-md-0">
+          <h4 class="mb-3 color-principal">Contacto</h4>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#" class="text-decoration-none text-dark">
+                <i class="fa fa-map-marker me-2" aria-hidden="true"></i>Duoc Antonio Varas
+              </a>
+            </li>
+            <li class="mt-2">
+              <a href="tel:+56912345678" class="text-decoration-none text-dark">
+                <i class="fa fa-phone me-2" aria-hidden="true"></i>+56 9 1234 5678
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <a href="index.html"
+            class="logo-footer d-block mb-2 fw-bold fs-4 color-principal text-decoration-none">LimpiFresh</a>
+          <p class="text-muted mb-0">
+            Productos de limpieza de alta calidad para tu hogar y negocio.<br>
+            Soluciones ecológicas para mantener tus espacios impecables.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
   <script src="bootstrap/js/bootstrap.min.js"></script>
+  <script src="js/carrito.js"></script>
+  <script src="js/ofertas.js"></script>
 </body>
 
 </html>

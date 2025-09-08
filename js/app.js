@@ -6,25 +6,45 @@ document.addEventListener("DOMContentLoaded", () => {
   registro.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const nombre = registro.nombreRegistro.value;
-    const correo = registro.correoRegistro.value;
-    const contraseña = registro.contraseñaRegistro.value;
+    const nombre = registro.nombreRegistro.value.trim();
+    const correo = registro.correoRegistro.value.trim();
+    const contraseña = registro.contraseñaRegistro.value.trim();
+
+    let valido = true;
+
+
+
+    //Validar correo
+    const regexCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!regexCorreo.test(correo)) {
+      mensajeRegistro.textContent = "¡Correo no válido!";
+      mensajeRegistro.style.color = "red";
+      valido = false;
+    }
+    //Validar contraseña
+    if (contraseña.length < 6) {
+      mensajeRegistro.textContent = "¡La contraseña debe tener al menos 6 caracteres!";
+      mensajeRegistro.style.color = "red";
+      valido = false;
+    }
+
+    if (!valido) return;
 
     let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 
-    // Revisar si ya existe el correo
+    //Revisar si ya existe el correo
     if (usuarios.some(user => user.correo === correo)) {
       mensajeRegistro.textContent = "¡Este correo ya está registrado!";
       mensajeRegistro.style.color = "red";
       return;
     }
 
-    // Guardar nuevo usuario
-    usuarios.push({ nombre, correo, contraseña });
-    localStorage.setItem("usuarios", JSON.stringify(usuarios));
-
     mensajeRegistro.textContent = "¡Registro exitoso! Redirigiendo...";
     mensajeRegistro.style.color = "green";
+
+    //Guardar usuario
+    usuarios.push({ nombre, correo, contraseña });
+    localStorage.setItem("usuarios", JSON.stringify(usuarios));
 
     setTimeout(() => {
       window.location.href = "login.html";
@@ -41,12 +61,25 @@ document.addEventListener("DOMContentLoaded", () => {
   loginForm.addEventListener("submit", (e) => {
     e.preventDefault();
 
-    // Obtener los inputs de manera segura
-    const correo = loginForm.querySelector('input[name="correoLogin"]').value;
-    const contraseña = loginForm.querySelector('input[name="contraseñaLogin"]').value;
+    const correo = loginForm.querySelector('input[name="correoLogin"]').value.trim();
+    const contraseña = loginForm.querySelector('input[name="contraseñaLogin"]').value.trim();
+
+    //Validar correo
+    const regexCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!regexCorreo.test(correo)) {
+      mensajeLogin.textContent = "¡Correo no válido!";
+      mensajeLogin.style.color = "red";
+      return;
+    }
+
+    //Validar contraseña
+    if (contraseña.length < 6) {
+      mensajeLogin.textContent = "¡La contraseña debe tener al menos 6 caracteres!";
+      mensajeLogin.style.color = "red";
+      return;
+    }
 
     let usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
-
     const usuarioValido = usuarios.find(user => user.correo === correo && user.contraseña === contraseña);
 
     if (usuarioValido) {
@@ -54,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
       mensajeLogin.style.color = "green";
 
       setTimeout(() => {
-        window.location.href = "prueba.html";
+        window.location.href = "index.html";
       }, 1000);
     } else {
       mensajeLogin.textContent = "Usuario o contraseña incorrectos";

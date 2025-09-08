@@ -13,7 +13,7 @@
 <body>
   <header class="d-flex justify-content-between align-items-center px-3 py-2 header-tienda">
     <div>
-      <h1 class="mb-0 header-titulo">LimpiFresh</h1>
+      <h1 class="mb-0 header-titulo"><a href="index.html" class="titulo-limpifresh">LimpiFresh</a></h1>
     </div>
     <nav class="mx-auto">
       <ul class="nav justify-content-center">
@@ -54,7 +54,7 @@
     <section class="row g-4">
       <!-- Producto 1 -->
       <div class="col-md-4">
-    <a href="detalle-producto.html?id=1" class="link-producto">
+        <a href="detalle-producto.html?id=1" class="link-producto">
           <div class="card h-100 shadow-sm position-relative">
             <img src="img/Detergente.jpg" class="card-img-top" alt="Detergente" />
             <div class="card-body text-center">
@@ -70,7 +70,7 @@
 
       <!-- Producto 2 (Oferta) -->
       <div class="col-md-4">
-    <a href="detalle-producto.html?id=2" class="link-producto">
+        <a href="detalle-producto.html?id=2" class="link-producto">
           <div class="card h-100 shadow-sm position-relative">
             <span class="badge-sale">Sale</span>
             <img src="img/Cloro.jpg" class="card-img-top" alt="Cloro" />
@@ -275,6 +275,35 @@
       </div>
     </section>
   </main>
+  <footer class="bg-light text-center text-lg-start mt-5 border-top">
+    <div class="container p-4">
+      <div class="row justify-content-center">
+        <div class="col-md-4 mb-3 mb-md-0">
+          <h4 class="mb-3 color-principal">Contacto</h4>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#" class="text-decoration-none text-dark">
+                <i class="fa fa-map-marker me-2" aria-hidden="true"></i>Duoc Antonio Varas
+              </a>
+            </li>
+            <li class="mt-2">
+              <a href="tel:+56912345678" class="text-decoration-none text-dark">
+                <i class="fa fa-phone me-2" aria-hidden="true"></i>+56 9 1234 5678
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <a href="index.html"
+            class="logo-footer d-block mb-2 fw-bold fs-4 color-principal text-decoration-none">LimpiFresh</a>
+          <p class="text-muted mb-0">
+            Productos de limpieza de alta calidad para tu hogar y negocio.<br>
+            Soluciones ecológicas para mantener tus espacios impecables.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
   <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="js/carrito.js"></script>
 </body>

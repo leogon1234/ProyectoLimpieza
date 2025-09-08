@@ -119,14 +119,26 @@ function generarID() {
 }
 
 // Mostrar datos
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('detalle-img').src = producto.img;
   document.getElementById('detalle-nombre').textContent = producto.nombre;
   document.getElementById('detalle-desc').textContent = producto.desc;
   document.getElementById('detalle-id').textContent = 'ID: ' + generarID();
-  if(producto.oferta) {
+  if (producto.oferta) {
     document.getElementById('detalle-precios').innerHTML = `<span class="detalle-precio-oferta">$${producto.precioOferta.toLocaleString()}</span> <span class="detalle-precio-tachado">$${producto.precio.toLocaleString()}</span>`;
   } else {
     document.getElementById('detalle-precios').innerHTML = `<span class="detalle-precio">$${producto.precio.toLocaleString()}</span>`;
   }
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  const params = new URLSearchParams(window.location.search);
+  const id = parseInt(params.get('id'));
+  document.getElementById('btn-agregar-carrito').addEventListener('click', function (e) {
+    e.preventDefault();
+    const cantidad = Math.max(1, parseInt(document.getElementById('cantidad').value) || 1);
+    agregarAlCarritoConCantidad(id, cantidad);
+  });
+});
+
+
