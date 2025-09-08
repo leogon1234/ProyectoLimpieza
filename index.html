@@ -7,30 +7,54 @@
   <title>Tienda de Limpieza</title>
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
 </head>
 
 <body>
-  <header>
-    <h1>Tienda de Limpieza</h1>
-    <nav>
-      <ul class="nav">
+  <header class="d-flex justify-content-between align-items-center px-3 py-2 header-tienda">
+    <div>
+      <h1 class="mb-0 header-titulo">LimpiFresh</h1>
+    </div>
+    <nav class="mx-auto">
+      <ul class="nav justify-content-center">
         <li class="nav-item">
-          <a class="nav-link text-white" href="index.html">Inicio</a>
+          <a class="nav-link" href="index.html">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="Productos.html">Productos</a>
+          <a class="nav-link active" href="productos.html">Productos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="#">Ofertas</a>
+          <a class="nav-link" href="ofertas.html">Ofertas</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="#">Contacto</a>
+          <a class="nav-link text-white" href="nosotros.html">Nosotros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="blogs.html">Blogs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contacto.html">Contacto</a>
         </li>
       </ul>
     </nav>
+    <div class="d-flex align-items-center gap-2">
+      <a href="login.html" class="btn btn-light" title="Mi cuenta">
+        <i class="bi bi-person"></i>
+      </a>
+    </div>
   </header>
-
-  <main class="container my-4">
+  <main class="container my-5">
+    <div class="text-center">
+  <h2 class="mb-4">¡Bienvenido a Tienda de Limpieza!</h2>
+      <p class="lead">
+        Descubre la mejor selección de productos para la limpieza de tu hogar, oficina o negocio.<br>
+        Ofrecemos calidad, buenos precios y atención personalizada para que encuentres todo lo que necesitas en un solo
+        lugar.
+      </p>
+      <a href="productos.html" class="btn btn-primary btn-lg mt-3">Ver productos</a>
+    </div>
+    <hr class="my-5">
     <section class="row g-4">
       <div class="col-md-4">
         <div class="card h-100 shadow-sm">
@@ -43,7 +67,6 @@
           </div>
         </div>
       </div>
-
       <div class="col-md-4">
         <div class="card h-100 shadow-sm">
           <img src="img/escoba.jpg" class="card-img-top" alt="Escoba" />
@@ -55,7 +78,6 @@
           </div>
         </div>
       </div>
-
       <div class="col-md-4">
         <div class="card h-100 shadow-sm">
           <img src="img/Cloro.jpg" class="card-img-top" alt="Cloro" />
@@ -68,7 +90,8 @@
         </div>
       </div>
     </section>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+  </main>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
 </body>
 
 </html>

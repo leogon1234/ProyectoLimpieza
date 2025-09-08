@@ -6,79 +6,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
     <title>Contacto</title>
 </head>
 
 <body>
-    <header>
-        <h1 class="titulo">LimpiFresh</h1>
-        <nav class="navegacion">
-            <ul class="lista-menu">
-                <li class="enlace-menu">
-                    <a class="nav-link text-white" href="prueba.html">Inicio</a>
+    <header class="d-flex justify-content-between align-items-center px-3 py-2 header-tienda">
+        <div>
+            <h1 class="mb-0 header-titulo">LimpiFresh</h1>
+        </div>
+        <nav class="mx-auto">
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Inicio</a>
                 </li>
-                <li class="enlace-menu">
-                    <a class="nav-link text-white" href="#">Productos</a>
+                <li class="nav-item">
+                    <a class="nav-link active" href="productos.html">Productos</a>
                 </li>
-                <li class="enlace-menu">
+                <li class="nav-item">
+                    <a class="nav-link" href="ofertas.html">Ofertas</a>
+                </li>
+                <li class="nav-item">
                     <a class="nav-link text-white" href="nosotros.html">Nosotros</a>
                 </li>
-                <li class="enlace-menu">
+                <li class="nav-item">
                     <a class="nav-link text-white" href="blogs.html">Blogs</a>
                 </li>
-                <li class="enlace-menu">
-                    <a class="nav-link text-white" href="contacto.html">Contacto</a>
-                </li>
-                <li class="enlace-menu">
-                    <a class="nav-link text-white" href="loginAdmin.html">Admin</a>
+                <li class="nav-item">
+                    <a class="nav-link" href="contacto.html">Contacto</a>
                 </li>
             </ul>
-            <p class="icono-usuario"><img src="img/iconoUsuario.jpg" alt="Icono" class="icono-usuario">
-            </p>
         </nav>
+        <div class="d-flex align-items-center gap-2">
+            <a href="login.html" class="btn btn-light" title="Mi cuenta">
+                <i class="bi bi-person"></i>
+            </a>
+        </div>
     </header>
 
-    <section class="contenedor-contacto">
-        <br>
-        <img src="" alt="Logo LIMPIFRESH" class="logo-limpifresh">
-        <h2>Contactanos</h2>
-        <br><br>
-        <form class="formulario-contacto">
-            <input type="text" placeholder="Nombre" required>
-            <input type="email" placeholder="Correo" required>
-            <input type="text" placeholder="Mensaje" required>
-            <button type="submit">Enviar mensaje</button>
-        </form>
-    </section>
-    <footer class="pie-de-pagina">
-        <div class="contenedor-footer">
-            <div class="fila-footer">
-                <div class="columna-footer">
-                    <div class="contacto-footer">
-                        <h4>Contacto</h4>
-                        <div class="enlaces-contacto">
-                            <a href="#">
-                                <i class="fa fa-map-marker" aria-hidden="true"></i>
-                                <span>Duoc Antonio Varas</span>
-                            </a>
-                            <a href="tel:+56912345678">
-                                <i class="fa fa-phone" aria-hidden="true"></i>
-                                <span>+56 9 1234 5678</span>
-                            </a>
+    <main class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-7 col-lg-6">
+                <div class="card shadow border-0">
+                    <div class="card-body p-4">
+                        <div class="text-center mb-4">
+                            <img src="logo.jpg" alt="Logo LIMPIFRESH" class="logo-limpifresh mb-2" width="90">
+                            <h2 class="fw-bold color-principal">Contáctanos</h2>
+                            <p class="text-muted">¿Tienes dudas o sugerencias? ¡Escríbenos!</p>
                         </div>
+                        <form class="formulario-contacto">
+                            <div class="mb-3">
+                                <label class="form-label">Nombre</label>
+                                <input type="text" class="form-control" placeholder="Nombre" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Correo</label>
+                                <input type="email" class="form-control" placeholder="Correo" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Mensaje</label>
+                                <textarea class="form-control" rows="4" placeholder="Mensaje" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-success w-100">Enviar mensaje</button>
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="columna-footer">
-            <div class="detalle-footer">
-                <a href="prueba.html" class="logo-footer">LimpiFresh </a>
-                <p>
-                    Productos de limpieza de alta calidad para tu hogar y negocio.
-                    Soluciones ecológicas para mantener tus espacios impecables.
-                </p>
+    </main>
+    <footer class="bg-light text-center text-lg-start mt-5 border-top">
+        <div class="container p-4">
+            <div class="row justify-content-center">
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h4 class="mb-3 color-principal">Contacto</h4>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#" class="text-decoration-none text-dark">
+                                <i class="fa fa-map-marker me-2" aria-hidden="true"></i>Duoc Antonio Varas
+                            </a>
+                        </li>
+                        <li class="mt-2">
+                            <a href="tel:+56912345678" class="text-decoration-none text-dark">
+                                <i class="fa fa-phone me-2" aria-hidden="true"></i>+56 9 1234 5678
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <a href="index.html" class="logo-footer d-block mb-2 fw-bold fs-4 color-principal text-decoration-none">LimpiFresh</a>
+                    <p class="text-muted mb-0">
+                        Productos de limpieza de alta calidad para tu hogar y negocio.<br>
+                        Soluciones ecológicas para mantener tus espacios impecables.
+                    </p>
+                </div>
             </div>
+        </div>
+        <div class="text-center py-3 bg-white border-top small text-muted">
+            &copy; 2025 LimpiFresh. Todos los derechos reservados.
         </div>
     </footer>
     <script src="bootstrap/js/bootstrap.min.js"></script>

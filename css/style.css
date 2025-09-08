@@ -1,3 +1,7 @@
+/* Color principal para títulos y enlaces destacados */
+.color-principal {
+  color: #2a9d8f !important;
+}
 /* Enlaces de productos sin subrayado y color heredado */
 .link-producto {
   text-decoration: none;
