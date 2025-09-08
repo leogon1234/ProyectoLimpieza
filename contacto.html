@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    
+
     <header class="d-flex justify-content-between align-items-center px-3 py-2 header-tienda">
         <div>
             <h1 class="mb-0 header-titulo"><a href="index.html" class="titulo-limpifresh">LimpiFresh</a></h1>
@@ -38,16 +38,22 @@
                 </li>
             </ul>
         </nav>
-        
+
         <div class="d-flex align-items-center gap-2">
             <a href="login.html" class="btn btn-light" title="Mi cuenta">
                 <i class="bi bi-person"></i>
+            </a>
+            <a href="carrito.html" class="btn btn-light position-relative" id="carrito-header-btn">
+                <i class="bi bi-cart"></i>
+                <span>Carrito</span>
+                <span class="badge bg-danger position-absolute top-0 start-100 translate-middle carrito-contador-badge"
+                    id="carrito-contador">0</span>
             </a>
         </div>
     </header>
 
     <main class="container my-5">
-        
+
         <div class="row justify-content-center">
             <div class="col-md-7 col-lg-6">
                 <div class="card shadow border-0">
@@ -95,11 +101,12 @@
                     </ul>
                 </div>
                 <div class="col-md-4">
-                    <a href="index.html" class="logo-footer d-block mb-2 fw-bold fs-4 color-principal text-decoration-none">LimpiFresh</a>
+                    <a href="index.html"
+                        class="logo-footer d-block mb-2 fw-bold fs-4 color-principal text-decoration-none">LimpiFresh</a>
                     <p class="text-muted mb-0">
                         Productos de limpieza de alta calidad para tu hogar y negocio.<br>
                         Soluciones ecológicas para mantener tus espacios impecables.
-                        
+
                     </p>
                 </div>
             </div>

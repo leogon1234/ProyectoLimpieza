@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
       <div class="col-md-4">
         <a href="detalle-producto.html?id=${prod.id}" class="link-producto">
           <div class="card h-100 shadow-sm position-relative">
-            <span class="badge-sale">Sale</span>
+            <span class="badge-sale">Descuento</span>
             <img src="${prod.img}" class="card-img-top" alt="${prod.nombre}" />
             <div class="card-body text-center d-flex flex-column justify-content-between h-100">
               <div>
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function () {
       <div class="col-md-4">
     <a href="detalle-producto.html?id=${prod.id}" class="link-producto">
           <div class="card h-100 shadow-sm position-relative">
-            <span class="badge-sale">Sale</span>
+            <span class="badge-sale">Descuento</span>
             <img src="${prod.img}" class="card-img-top" alt="${prod.nombre}" />
             <div class="card-body text-center d-flex flex-column justify-content-between h-100">
               <div>
