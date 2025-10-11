@@ -14,84 +14,88 @@
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 </head>
 
-<body class="sb-nav-fixed">
-    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-    </nav>
-    <div id="layoutSidenav">
-        <div id="layoutSidenav_nav">
-            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
-                <div class="sb-sidenav-menu">
-                    <div class="nav">
-                        <p class="titulo"><a href="index.html" class="titulo-limpifresh">LimpiFresh</a></p>
-                        <div class="sb-sidenav-menu-heading">Atajos</div>
-                        <a class="nav-link" href="index.html">
-                            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                            Pagina principal
-                        </a>
-                        <div class="sb-sidenav-menu-heading">Paginas</div>
-                        <a class="nav-link" href="registro.html">
-                            <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                            Registro
-                        </a>
-                        <a class="nav-link" href="login.html">
-                            <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                            Inicio sesion
-                        </a>
-                    </div>
-                </div>
-            </nav>
-        </div>
-        <div id="layoutSidenav_content">
-            <main>
-                <div class="container-fluid px-4">
-                    <h1 class="mt-4">Gestión de Productos</h1>
-                    <ol class="breadcrumb mb-4">
-                        <li class="breadcrumb-item active">Panel Administrador</li>
-                    </ol>
+<header>
+        <h1><a href="index.html">LimpiFresh</a></h1>
+        <nav class="navegacion">
+            <ul class="lista-menu">
+                <li class="enlace-menu">
+                    <a class="nav-link text-white" href="prueba.html">Inicio</a>
+                </li>
+                <li class="enlace-menu">
+                    <a class="nav-link text-white" href="nosotros.html">Nosotros</a>
+                </li>
+                <li class="enlace-menu">
+                    <a class="nav-link text-white" href="blogs.html">Blogs</a>
+                </li>
+                <li class="enlace-menu">
+                    <a class="nav-link text-white" href="contacto.html">Contacto</a>
+                </li>
+            </ul>
+            <p class="icono-usuario"><img src="img/iconoUsuario.jpg" alt="Icono" class="icono-usuario">
+            </p>
+        </nav>
+    </header>
 
-                    <div class="card mb-4">
-                        <div class="card-header">
-                            <i class="fas fa-plus me-1"></i>
-                            Agregar Producto
-                        </div>
-                        <div class="card-body">
-                            <form id="formProducto" class="row g-3">
-                                <div class="col-md-6">
-                                    <input type="text" id="nombre" class="form-control"
-                                        placeholder="Nombre del producto" required>
-                                </div>
-                                <div class="col-md-4">
-                                    <input type="number" id="precio" class="form-control" placeholder="Precio" required>
-                                </div>
-                                <div class="col-md-2">
-                                    <button type="submit" class="btn btn-success w-100">Agregar</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
+<body class="bg-light">
+    <div class="container mt-5">
+        <h1 class="text-center mb-4">Panel de Administración</h1>
 
-                    <div class="card mb-4">
-                        <div class="card-header">
-                            <i class="fas fa-table me-1"></i>
-                            Lista de Productos
-                        </div>
-                        <div class="card-body">
-                            <table id="tablaProductos" class="table table-striped">
-                                <thead>
-                                    <tr>
-                                        <th>Producto</th>
-                                        <th>Precio</th>
-                                        <th>Acciones</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
+        <div class="card shadow-sm p-4">
+            <h2 class="mb-3">Agregar / Editar Producto</h2>
+
+            <form>
+                <div class="mb-3">
+                    <p class="form-label">Nombre del producto</p>
+                    <input type="text" class="form-control">
                 </div>
-            </main>
+
+                <div class="mb-3">
+                    <p class="form-label">Descripcion</p>
+                    <textarea class="form-control" rows="3"></textarea>
+                </div>
+
+                <div class="mb-3 row">
+                    <div class="col-md-6">
+                        <p class="form-label">Precio del producto</p>
+                        <input type="number" class="form-control">
+                    </div>
+                    <div class="col-md-6">
+                        <p class="form-label">Stock</p>
+                        <input type="number" class="form-control">
+                    </div>
+                    <div class="text-end">
+                        <button type="submit" class="btn btn-success">Guardar</button>
+                    </div>
+            </form>
         </div>
+    </div>
+
+    <div class="card mt-5 shadow-sm p-4">
+      <h4 class="mb-3">Productos</h4>
+      <table class="table table-striped">
+        <thead class="table-dark">
+          <tr>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Stock</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Detergente líquido</td>
+            <td>$2500</td>
+            <td>25</td>
+            <td>
+              <button class="btn btn-sm btn-primary">Editar</button>
+              <button class="btn btn-sm btn-danger">Eliminar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
     </div>
     <footer class="bg-light text-center text-lg-start mt-5 border-top">
         <div class="container p-4">
