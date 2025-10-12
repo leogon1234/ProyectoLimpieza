@@ -2,139 +2,197 @@
 <html lang="es">
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>Administacion LimpiFresh</title>
-    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
-    <link href="css/styleAdmin.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>Administración LimpiFresh</title>
+  <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+  <link href="css/styleAdmin.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+
+  <style>
+    .header-admin {
+      background-color: #2f8b82;
+      padding: 15px 0;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .contenedor-header {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #fff;
+    }
+
+    .logo a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.8rem;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .logo a:hover {
+      color: #d4f1ef;
+    }
+
+    .navegacion .lista-menu {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navegacion .lista-menu a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .navegacion .lista-menu a:hover {
+      color: #d4f1ef;
+    }
+
+    .icono-usuario img {
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid white;
+      transition: transform 0.3s;
+    }
+
+    .icono-usuario img:hover {
+      transform: scale(1.1);
+    }
+  </style>
 </head>
 
-<header>
-        <h1><a href="index.html">LimpiFresh</a></h1>
-        <nav class="navegacion">
-            <ul class="lista-menu">
-                <li class="enlace-menu">
-                    <a class="nav-link text-white" href="prueba.html">Inicio</a>
-                </li>
-                <li class="enlace-menu">
-                    <a class="nav-link text-white" href="nosotros.html">Nosotros</a>
-                </li>
-                <li class="enlace-menu">
-                    <a class="nav-link text-white" href="blogs.html">Blogs</a>
-                </li>
-                <li class="enlace-menu">
-                    <a class="nav-link text-white" href="contacto.html">Contacto</a>
-                </li>
-            </ul>
-            <p class="icono-usuario"><img src="img/iconoUsuario.jpg" alt="Icono" class="icono-usuario">
-            </p>
-        </nav>
-    </header>
-
 <body class="bg-light">
-    <div class="container mt-5">
-        <h1 class="text-center mb-4">Panel de Administración</h1>
-
-        <div class="card shadow-sm p-4">
-            <h2 class="mb-3">Agregar / Editar Producto</h2>
-
-            <form>
-                <div class="mb-3">
-                    <p class="form-label">Nombre del producto</p>
-                    <input type="text" class="form-control">
-                </div>
-
-                <div class="mb-3">
-                    <p class="form-label">Descripcion</p>
-                    <textarea class="form-control" rows="3"></textarea>
-                </div>
-
-                <div class="mb-3 row">
-                    <div class="col-md-6">
-                        <p class="form-label">Precio del producto</p>
-                        <input type="number" class="form-control">
-                    </div>
-                    <div class="col-md-6">
-                        <p class="form-label">Stock</p>
-                        <input type="number" class="form-control">
-                    </div>
-                    <div class="text-end">
-                        <button type="submit" class="btn btn-success">Guardar</button>
-                    </div>
-            </form>
-        </div>
+  <header class="header-admin">
+    <div class="contenedor-header">
+      <h1 class="logo">
+        <a href="index.html">LimpiFresh</a>
+      </h1>
+      <nav class="navegacion">
+        <ul class="lista-menu">
+          <li><a href="prueba.html">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="blogs.html">Blogs</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="icono-usuario">
+        <img src="img/iconoUsuario.jpg" alt="Icono de usuario">
+      </div>
     </div>
+  </header>
 
-    <div class="card mt-5 shadow-sm p-4">
-      <h4 class="mb-3">Productos</h4>
-      <table class="table table-striped">
-        <thead class="table-dark">
-          <tr>
-            <th>Nombre</th>
-            <th>Precio</th>
-            <th>Stock</th>
-            <th>Acciones</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Detergente líquido</td>
-            <td>$2500</td>
-            <td>25</td>
-            <td>
-              <button class="btn btn-sm btn-primary">Editar</button>
-              <button class="btn btn-sm btn-danger">Eliminar</button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">Panel de Administración</h1>
+
+    <div class="card shadow-sm p-4">
+      <h2 class="mb-3">Agregar / Editar Producto</h2>
+
+      <form>
+        <div class="mb-3">
+          <p class="form-label">Nombre del producto</p>
+          <input type="text" class="form-control">
+        </div>
+
+        <div class="mb-3">
+          <p class="form-label">Descripción</p>
+          <textarea class="form-control" rows="3"></textarea>
+        </div>
+
+        <div class="mb-3 row">
+          <div class="col-md-6">
+            <p class="form-label">Precio del producto</p>
+            <input type="number" class="form-control">
+          </div>
+          <div class="col-md-6">
+            <p class="form-label">Stock</p>
+            <input type="number" class="form-control">
+          </div>
+        </div>
+
+        <div class="text-end">
+          <button type="submit" class="btn btn-success">Guardar</button>
+        </div>
+      </form>
     </div>
   </div>
 
-    </div>
-    <footer class="bg-light text-center text-lg-start mt-5 border-top">
-        <div class="container p-4">
-            <div class="row justify-content-center">
-                <div class="col-md-4 mb-3 mb-md-0">
-                    <h4 class="mb-3 color-principal">Contacto</h4>
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="#" class="text-decoration-none text-dark">
-                                <i class="fa fa-map-marker me-2" aria-hidden="true"></i>Duoc Antonio Varas
-                            </a>
-                        </li>
-                        <li class="mt-2">
-                            <a href="tel:+56912345678" class="text-decoration-none text-dark">
-                                <i class="fa fa-phone me-2" aria-hidden="true"></i>+56 9 1234 5678
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <a href="index.html"
-                        class="logo-footer d-block mb-2 fw-bold fs-4 color-principal text-decoration-none">LimpiFresh</a>
-                    <p class="text-muted mb-0">
-                        Productos de limpieza de alta calidad para tu hogar y negocio.<br>
-                        Soluciones ecológicas para mantener tus espacios impecables.
-                    </p>
-                </div>
-            </div>
+  <div class="card mt-5 shadow-sm p-4">
+    <h4 class="mb-3">Productos</h4>
+    <table class="table table-striped">
+      <thead class="table-dark">
+        <tr>
+          <th>Nombre</th>
+          <th>Precio</th>
+          <th>Stock</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Detergente líquido</td>
+          <td>$2500</td>
+          <td>25</td>
+          <td>
+            <button class="btn btn-sm btn-primary">Editar</button>
+            <button class="btn btn-sm btn-danger">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer class="bg-light text-center text-lg-start mt-5 border-top">
+    <div class="container p-4">
+      <div class="row justify-content-center">
+        <div class="col-md-4 mb-3 mb-md-0">
+          <h4 class="mb-3 color-principal">Contacto</h4>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#" class="text-decoration-none text-dark">
+                <i class="fa fa-map-marker me-2" aria-hidden="true"></i>Duoc Antonio Varas
+              </a>
+            </li>
+            <li class="mt-2">
+              <a href="tel:+56912345678" class="text-decoration-none text-dark">
+                <i class="fa fa-phone me-2" aria-hidden="true"></i>+56 9 1234 5678
+              </a>
+            </li>
+          </ul>
         </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        crossorigin="anonymous"></script>
-    <script src="js/scripts.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-    <script src="assets/demo/chart-area-demo.js"></script>
-    <script src="assets/demo/chart-bar-demo.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js"
-        crossorigin="anonymous"></script>
-    <script src="js/datatables-simple-demo.js"></script>
+        <div class="col-md-4">
+          <a href="index.html" class="logo-footer d-block mb-2 fw-bold fs-4 color-principal text-decoration-none">LimpiFresh</a>
+          <p class="text-muted mb-0">
+            Productos de limpieza de alta calidad para tu hogar y negocio.<br>
+            Soluciones ecológicas para mantener tus espacios impecables.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="js/scripts.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+  <script src="assets/demo/chart-area-demo.js"></script>
+  <script src="assets/demo/chart-bar-demo.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js"
+    crossorigin="anonymous"></script>
+  <script src="js/datatables-simple-demo.js"></script>
 </body>
 
 </html>
