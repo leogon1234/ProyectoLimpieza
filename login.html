@@ -2,89 +2,92 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar Sesion</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar Sesión</title>
 </head>
 
 <body>
-    <header class="d-flex justify-content-between align-items-center px-3 py-2 header-tienda text-white">
-        <div>
-            <h1 class="mb-0 header-titulo text-white">LimpiFresh</h1>
-        </div>
-        <nav class="mx-auto">
-            <ul class="nav justify-content-center">
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="index.html">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="loginAdmin.html">Admin</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <img src="img/logo.jpg" alt="Logo LIMPIFRESH" class="logo-limpifresh my-4">
-    <main class="container my-5">
-        <div class="row justify-content-center">
-            <div class="col-md-6 col-lg-5">
-                <div class="card shadow">
-                    <div class="card-body">
-                        <h2 class="text-center mb-4">Iniciar Sesión</h2>
-                        <form id="login">
-                            <div class="mb-3">
-                                <label for="correoLogin" class="form-label">Correo</label>
-                                <input type="email" name="correoLogin" id="correoLogin" class="form-control"
-                                    placeholder="Correo" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="contraseñaLogin" class="form-label">Contraseña</label>
-                                <input type="password" name="contraseñaLogin" id="contraseñaLogin" class="form-control"
-                                    placeholder="Contraseña" required>
-                            </div>
-                            <button type="submit" class="btn btn-success w-100">Iniciar Sesión</button>
-                            <p id="mensajeLogin" class="mensaje-error mt-2"></p>
-                            <p class="registro-enlace mt-3 text-center">¿No tienes una cuenta? <a href="registro.html"
-                                    class="si_tiene_cuenta">Regístrate</a></p>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
+  <header class="d-flex justify-content-between align-items-center px-3 py-2 header-tienda text-white">
+    <div>
+      <h1 class="mb-0 header-titulo text-white">LimpiFresh</h1>
+    </div>
+    <nav class="mx-auto">
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link text-white" href="index.html">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white" href="login.html">Admin</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
-    <footer class="bg-light text-center text-lg-start mt-5 border-top">
-        <div class="container p-4">
-            <div class="row justify-content-center">
-                <div class="col-md-4 mb-3 mb-md-0">
-                    <h4 class="mb-3 color-principal">Contacto</h4>
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="#" class="text-decoration-none text-dark">
-                                <i class="fa fa-map-marker me-2" aria-hidden="true"></i>Duoc Antonio Varas
-                            </a>
-                        </li>
-                        <li class="mt-2">
-                            <a href="tel:+56912345678" class="text-decoration-none text-dark">
-                                <i class="fa fa-phone me-2" aria-hidden="true"></i>+56 9 1234 5678
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <a href="index.html"
-                        class="logo-footer d-block mb-2 fw-bold fs-4 color-principal text-decoration-none">LimpiFresh</a>
-                    <p class="text-muted mb-0">
-                        Productos de limpieza de alta calidad para tu hogar y negocio.<br>
-                        Soluciones ecológicas para mantener tus espacios impecables.
-                    </p>
-                </div>
-            </div>
+  <img src="img/logo.jpg" alt="Logo LIMPIFRESH" class="logo-limpifresh my-4">
+
+  <main class="container my-5">
+    <div class="row justify-content-center">
+      <div class="col-md-6 col-lg-5">
+        <div class="card shadow">
+          <div class="card-body">
+            <h2 class="text-center mb-4">Iniciar Sesión</h2>
+            <form id="login">
+              <div class="mb-3">
+                <label for="correoLogin" class="form-label">Correo o Usuario</label>
+                <input type="text" name="correoLogin" id="correoLogin" class="form-control"
+                  placeholder="Correo / Usuario" required>
+              </div>
+              <div class="mb-3">
+                <label for="contraseñaLogin" class="form-label">Contraseña</label>
+                <input type="password" name="contraseñaLogin" id="contraseñaLogin" class="form-control"
+                  placeholder="Contraseña" required>
+              </div>
+              <button type="submit" class="btn btn-success w-100">Iniciar Sesión</button>
+              <p id="mensajeLogin" class="mensaje-error mt-2"></p>
+              <p class="registro-enlace mt-3 text-center">¿No tienes una cuenta? <a href="registro.html"
+                  class="si_tiene_cuenta">Regístrate</a></p>
+            </form>
+          </div>
         </div>
-    </footer>
-    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="js/app.js"></script>
+      </div>
+    </div>
+  </main>
+
+  <footer class="bg-light text-center text-lg-start mt-5 border-top">
+    <div class="container p-4">
+      <div class="row justify-content-center">
+        <div class="col-md-4 mb-3 mb-md-0">
+          <h4 class="mb-3 color-principal">Contacto</h4>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#" class="text-decoration-none text-dark">
+                <i class="fa fa-map-marker me-2" aria-hidden="true"></i>Duoc Antonio Varas
+              </a>
+            </li>
+            <li class="mt-2">
+              <a href="tel:+56912345678" class="text-decoration-none text-dark">
+                <i class="fa fa-phone me-2" aria-hidden="true"></i>+56 9 1234 5678
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <a href="index.html"
+            class="logo-footer d-block mb-2 fw-bold fs-4 color-principal text-decoration-none">LimpiFresh</a>
+          <p class="text-muted mb-0">
+            Productos de limpieza de alta calidad para tu hogar y negocio.<br>
+            Soluciones ecológicas para mantener tus espacios impecables.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
 </body>
 
 </html>

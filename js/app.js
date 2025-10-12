@@ -64,7 +64,18 @@ document.addEventListener("DOMContentLoaded", () => {
     const correo = loginForm.querySelector('input[name="correoLogin"]').value.trim();
     const contraseña = loginForm.querySelector('input[name="contraseñaLogin"]').value.trim();
 
-    //Validar correo
+    // Si es admin
+    if (correo === "admin" && contraseña === "admin") {
+      mensajeLogin.textContent = "¡Bienvenido Administrador!";
+      mensajeLogin.style.color = "green";
+
+      setTimeout(() => {
+        window.location.href = "admin.html";
+      }, 1000);
+      return;
+    }
+
+    // Validar correo
     const regexCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!regexCorreo.test(correo)) {
       mensajeLogin.textContent = "¡Correo no válido!";
@@ -72,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    //Validar contraseña
+    // Validar contraseña
     if (contraseña.length < 6) {
       mensajeLogin.textContent = "¡La contraseña debe tener al menos 6 caracteres!";
       mensajeLogin.style.color = "red";
@@ -94,25 +105,4 @@ document.addEventListener("DOMContentLoaded", () => {
       mensajeLogin.style.color = "red";
     }
   });
-});
-
-
-
-//JS DE LOGIN ADMIN
-const formulario = document.getElementById('formularioLogin');
-const mensajeError = document.getElementById('mensajeError');
-
-formulario.addEventListener('submit', function (e) {
-  e.preventDefault();
-
-  const usuario = document.getElementById('usuario').value;
-  const clave = document.getElementById('clave').value;
-  const adminUsuario = "admin";
-  const adminClave = "admin";
-
-  if (usuario === adminUsuario && clave === adminClave) {
-    window.location.href = "admin.html";
-  } else {
-    mensajeError.textContent = "Usuario o contraseña incorrectos";
-  }
 });
