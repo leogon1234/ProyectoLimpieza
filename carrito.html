@@ -48,16 +48,22 @@
           id="carrito-contador">0</span>
       </a>
     </div>
-
   </header>
+
   <main class="container my-4">
     <h2>Carrito de Compras</h2>
     <div id="carrito-lista"></div>
-    <div class="mt-4 text-end">
+    <div id="carrito-resumen" class="mt-4 text-end">
       <div id="carrito-original-iva" class="mb-2 carrito-iva-text"></div>
       <h4>Total: <span id="carrito-total">$0</span></h4>
+      <div id="carrito-acciones">
+        <button class="btn-pagar mt-3" id="btn-pagar">
+          <i class="bi bi-credit-card me-2"></i>Pagar ahora
+        </button>
+      </div>
     </div>
   </main>
+
   <footer class="bg-light text-center text-lg-start mt-5 border-top">
     <div class="container p-4">
       <div class="row justify-content-center">
@@ -87,7 +93,17 @@
       </div>
     </div>
   </footer>
+
   <script src="js/carrito.js"></script>
+
+  <script>
+    document.addEventListener('click', (e) => {
+      const boton = e.target.closest('#btn-pagar');
+      if (boton) {
+        alert('Gracias por tu compra en LimpiFresh.\nTu pedido está siendo procesado.');
+      }
+    });
+  </script>
 </body>
 
 </html>
