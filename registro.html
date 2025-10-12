@@ -44,7 +44,27 @@
                             <div class="mb-3">
                                 <label for="contraseñaRegistro" class="form-label">Contraseña</label>
                                 <input type="password" id="contraseñaRegistro" class="form-control" required
-                                    placeholder="Contraseña">
+                                    placeholder="Contraseña (mín. 8)">
+                            </div>
+                            <div class="mb-3">
+                                <label for="rutRegistro" class="form-label">RUT</label>
+                                <input type="text" id="rutRegistro" class="form-control" required placeholder="12.345.678-5">
+                                <div class="form-text">Se valida el dígito verificador.</div>
+                            </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="regionRegistro" class="form-label">Región</label>
+                                    <input type="text" id="regionRegistro" class="form-control" value="Región Metropolitana de Santiago" disabled>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="comunaRegistro" class="form-label">Comuna</label>
+                                    <select id="comunaRegistro" class="form-select" required>
+                                        <option value="">Cargando comunas…</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="direccionRegistro" class="form-label">Dirección</label>
+                                <input type="text" id="direccionRegistro" class="form-control" required placeholder="Calle y número">
                             </div>
                             <button type="submit" class="btn btn-success w-100">Registrarse</button>
                         </form>
