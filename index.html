@@ -22,10 +22,10 @@
           <a class="nav-link" href="index.html">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link active" href="Productos.html">Productos</a>
+          <a class="nav-link active" href="productos.html">Productos</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="Ofertas.html">Ofertas</a>
+          <a class="nav-link" href="ofertas.html">Ofertas</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-white" href="nosotros.html">Nosotros</a>
@@ -58,62 +58,43 @@
         Ofrecemos calidad, buenos precios y atención personalizada para que encuentres todo lo que necesitas en un solo
         lugar.
       </p>
-      <a href="Productos.html" class="btn btn-primary btn-lg mt-3">Ver productos</a>
+      <a href="productos.html" class="btn btn-primary btn-lg mt-3">Ver productos</a>
     </div>
-    <div id="homeCarousel" class="carousel slide my-5" data-bs-ride="carousel">
+    <div id="marcasCarousel" class="carousel slide my-5 carousel-marcas" data-bs-ride="carousel" data-bs-interval="3500">
       <div class="carousel-indicators">
-        <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-        <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-        <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
-        <button type="button" data-bs-target="#homeCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        <button type="button" data-bs-target="#marcasCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#marcasCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
       </div>
       <div class="carousel-inner rounded shadow-sm">
         <div class="carousel-item active">
-          <img src="img/limpiador-multiuso.jpg" class="d-block w-100" alt="Limpiador multiuso">
+          <div class="slide-frame">
+            <img src="img/marcas-1.png" class="d-block slide-img" alt="Productos de limpieza marcas 1">
+          </div>
           <div class="carousel-caption d-none d-md-block">
-            <h5>Soluciones para todo tu hogar</h5>
-            <p>Calidad y buenos precios todos los días.</p>
+            <h5>Calidad profesional</h5>
+            <p>Las mejores marcas para tu hogar y negocio.</p>
           </div>
         </div>
         <div class="carousel-item">
-          <img src="img/limpiavidrios.jpg" class="d-block w-100" alt="Limpiavidrios">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Brillo impecable</h5>
-            <p>Productos que marcan la diferencia.</p>
+          <div class="slide-frame">
+            <img src="img/marcas-2.png" class="d-block slide-img" alt="Productos de limpieza marcas 2">
           </div>
-        </div>
-        <div class="carousel-item">
-          <img src="img/Detergente.jpg" class="d-block w-100" alt="Detergente líquido">
           <div class="carousel-caption d-none d-md-block">
-            <h5>Cuida tu ropa</h5>
-            <p>Rendimiento y suavidad en cada lavado.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="img/Cloro.jpg" class="d-block w-100" alt="Cloro desinfectante">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Desinfección total</h5>
-            <p>Elimina el 99.9% de bacterias y virus.</p>
-          </div>
-        </div>
-        <div class="carousel-item">
-          <img src="img/limpiapisos.jpg" class="d-block w-100" alt="Limpiapisos">
-          <div class="carousel-caption d-none d-md-block">
-            <h5>Pisos relucientes</h5>
-            <p>Frescura y limpieza en cada pasada.</p>
+            <h5>Variedad y buen precio</h5>
+            <p>Detergentes, ceras, limpiadores y mucho más.</p>
           </div>
         </div>
       </div>
-      <button class="carousel-control-prev" type="button" data-bs-target="#homeCarousel" data-bs-slide="prev">
+      <button class="carousel-control-prev" type="button" data-bs-target="#marcasCarousel" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Anterior</span>
       </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#homeCarousel" data-bs-slide="next">
+      <button class="carousel-control-next" type="button" data-bs-target="#marcasCarousel" data-bs-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Siguiente</span>
       </button>
     </div>
+
     <hr class="my-5">
     <section class="row g-4">
       <div class="col-md-4">
@@ -180,7 +161,7 @@
       </div>
     </div>
   </footer>
-  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="bootstrap/js/bootstrap.min.js"></script>
   <script src="js/carrito.js"></script>
   <script src="js/ofertas.js"></script>
 </body>
