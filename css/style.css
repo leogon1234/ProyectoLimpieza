@@ -49,7 +49,7 @@ body {
 .precio {
   display: block;
   margin: 50px 0;
-  color: #d46a14;
+  color: #198754; /* verde (Bootstrap success) en lugar de naranjo */
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 0.5rem;
@@ -98,6 +98,23 @@ header h1 {
 
 .nav .nav-link {
   color: white !important;
+}
+
+#tabs-detalle .nav-link {
+  color: #000 !important;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  margin-bottom: -1px; /* para unirse con el contenedor de contenido */
+}
+#tabs-detalle .nav-link:hover,
+#tabs-detalle .nav-link:focus {
+  color: #000 !important;
+  background-color: #ffffff;
+}
+#tabs-detalle .nav-link.active {
+  color: #000 !important;
+  background-color: #fff;
+  border-color: #dee2e6 #dee2e6 #fff; /* sin borde inferior para integrarse con el panel */
 }
 
 /* Detalle de producto */
