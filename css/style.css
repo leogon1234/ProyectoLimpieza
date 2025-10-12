@@ -186,3 +186,20 @@ header h1 {
   display: block;
   margin: 100px auto;  /* centrado vertical y horizontal */
 }
+
+/* Botón de pago del carrito  */
+.btn-pagar {
+  background-color: #2f8b82;  /* Verde LimpiFresh */
+  color: #fff;
+  font-weight: 600;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.btn-pagar:hover {
+  background-color: #26736c;  /* tono más oscuro al pasar el mouse */
+  color: #fff;
+}
