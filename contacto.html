@@ -33,7 +33,7 @@
           <li class="nav-item"><a class="nav-link" href="ofertas.html">Ofertas</a></li>
           <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
           <li class="nav-item"><a class="nav-link" href="blogs.html">Blogs</a></li>
-          <li class="nav-item"><a class="nav-link active" href="contacto.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
         </ul>
 
         <div class="d-flex align-items-center gap-2">
@@ -52,7 +52,6 @@
     </div>
   </header>
 
-  <!-- ===== CONTENIDO PRINCIPAL ===== -->
   <main class="py-5">
     <div class="container">
       <div class="row g-4 align-items-start">
@@ -75,12 +74,6 @@
               </div>
               <div class="col-md-6">
                 <input id="email" type="email" class="form-control lf-input" placeholder="Correo" required />
-              </div>
-              <div class="col-md-6">
-                <input id="phone" type="tel" class="form-control lf-input" placeholder="Teléfono (opcional)" />
-              </div>
-              <div class="col-md-6">
-                <input id="project" type="text" class="form-control lf-input" placeholder="Asunto / Proyecto (opcional)" />
               </div>
               <div class="col-12">
                 <input id="subject" type="text" class="form-control lf-input" placeholder="Asunto" />
@@ -113,12 +106,7 @@
             <div><h6 class="mb-1">Dirección</h6><small>Duoc UC Antonio Varas, Santiago</small></div>
           </div>
         </div>
-        <div class="col-sm-6 col-lg-3">
-          <div class="lf-card d-flex align-items-center p-3">
-            <i class="bi bi-envelope-fill lf-icon"></i>
-            <div><h6 class="mb-1">Mail</h6><small>contacto@limpifresh.cl</small></div>
-          </div>
-        </div>
+
         <div class="col-sm-6 col-lg-3">
           <div class="lf-card d-flex align-items-center p-3">
             <i class="bi bi-telephone-fill lf-icon"></i>
@@ -126,15 +114,38 @@
           </div>
         </div>
         <div class="col-sm-6 col-lg-3">
-          <div class="lf-card d-flex align-items-center p-3">
-            <i class="bi bi-clock-fill lf-icon"></i>
-            <div><h6 class="mb-1">Horario</h6><small>Lun–Sáb 10:00–19:00</small></div>
-          </div>
+
+    </div>
+  </main>
+  <footer class="bg-light text-center text-lg-start mt-5 border-top">
+    <div class="container p-4">
+      <div class="row justify-content-center">
+        <div class="col-md-4 mb-3 mb-md-0">
+          <h4 class="mb-3 color-principal">Contacto</h4>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#" class="text-decoration-none text-dark">
+                <i class="fa fa-map-marker me-2" aria-hidden="true"></i>Duoc Antonio Varas
+              </a>
+            </li>
+            <li class="mt-2">
+              <a href="tel:+56912345678" class="text-decoration-none text-dark">
+                <i class="fa fa-phone me-2" aria-hidden="true"></i>+56 9 1234 5678
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <a href="index.html"
+            class="logo-footer d-block mb-2 fw-bold fs-4 color-principal text-decoration-none">LimpiFresh</a>
+          <p class="text-muted mb-0">
+            Productos de limpieza de alta calidad para tu hogar y negocio.<br>
+            Soluciones ecológicas para mantener tus espacios impecables.
+          </p>
         </div>
       </div>
     </div>
-  </main>
-
+  </footer>
  
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/contacto-limpifresh.js"></script>
