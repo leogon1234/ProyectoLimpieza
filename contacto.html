@@ -1,115 +1,142 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-    <title>Contacto</title>
+  <meta charset="utf-8" />
+  <title>Contacto — LimpiFresh</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- Bootstrap + Iconos -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
+
+  
+  <link href="css/contacto-limpifresh.css" rel="stylesheet" />
+
+  
 </head>
 
 <body>
+ 
+  <header class="lf-navbar navbar navbar-expand-lg navbar-dark bg-brand sticky-top shadow-sm">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">LimpiFresh</a>
 
-    <header class="d-flex justify-content-between align-items-center px-3 py-2 header-tienda">
-        <div>
-            <h1 class="mb-0 header-titulo"><a href="index.html" class="titulo-limpifresh">LimpiFresh</a></h1>
-        </div>
-        <nav class="mx-auto">
-            <ul class="nav justify-content-center">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="productos.html">Productos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="ofertas.html">Ofertas</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="nosotros.html">Nosotros</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="blogs.html">Blogs</a>
-                </li>
-            </ul>
-        </nav>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#lfNav"
+        aria-controls="lfNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="lfNav">
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-3">
+          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
+          <li class="nav-item"><a class="nav-link" href="ofertas.html">Ofertas</a></li>
+          <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="blogs.html">Blogs</a></li>
+          <li class="nav-item"><a class="nav-link active" href="contacto.html">Contacto</a></li>
+        </ul>
 
         <div class="d-flex align-items-center gap-2">
-            <a href="login.html" class="btn btn-light" title="Mi cuenta">
-                <i class="bi bi-person"></i>
-            </a>
-            <a href="carrito.html" class="btn btn-light position-relative" id="carrito-header-btn">
-                <i class="bi bi-cart"></i>
-                <span>Carrito</span>
-                <span class="badge bg-danger position-absolute top-0 start-100 translate-middle carrito-contador-badge"
-                    id="carrito-contador">0</span>
-            </a>
+          <a href="login.html" class="btn btn-light btn-sm rounded-3 d-flex align-items-center gap-1">
+            <i class="bi bi-person"></i>
+            <span class="d-none d-md-inline">Iniciar sesión</span>
+          </a>
+
+          <a href="carrito.html" class="btn btn-light btn-sm rounded-3 position-relative d-flex align-items-center gap-1">
+            <i class="bi bi-cart"></i>
+            <span class="d-none d-md-inline">Carrito</span>
+            <span id="lfCartBadge" class="badge bg-danger rounded-pill position-absolute top-0 end-0 translate-middle">3</span>
+          </a>
         </div>
-    </header>
+      </div>
+    </div>
+  </header>
 
-    <main class="container my-5">
+  <!-- ===== CONTENIDO PRINCIPAL ===== -->
+  <main class="py-5">
+    <div class="container">
+      <div class="row g-4 align-items-start">
+        <!-- Izquierda: formulario -->
+        <div class="col-lg-6">
+          <p class="lf-eyebrow mb-2">Conectemos</p>
+          <h1 class="lf-title mb-3">Envíanos tu mensaje</h1>
+          <p class="text-muted mb-4">
+            ¿Tienes dudas o sugerencias? Completa el formulario y te responderemos a la brevedad.
+          </p>
 
-        <div class="row justify-content-center">
-            <div class="col-md-7 col-lg-6">
-                <div class="card shadow border-0">
-                    <div class="card-body p-4">
-                        <div class="text-center mb-4">
-                            <h2 class="fw-bold color-principal">Contáctanos</h2>
-                            <p class="text-muted">¿Tienes dudas o sugerencias? ¡Escríbenos!</p>
-                        </div>
-                        <form class="formulario-contacto">
-                            <div class="mb-3">
-                                <label class="form-label">Nombre</label>
-                                <input type="text" class="form-control" placeholder="Nombre" required>
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Correo</label>
-                                <input type="email" class="form-control" placeholder="Correo" required>
-                            </div>
-                            <div class="mb-3">
-                                <label class="form-label">Mensaje</label>
-                                <textarea class="form-control" rows="4" placeholder="Mensaje" required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-success w-100">Enviar mensaje</button>
-                        </form>
-                    </div>
-                </div>
+          <div id="lfOk" class="alert alert-success d-none">¡Gracias! Tu mensaje fue enviado correctamente.</div>
+          <div id="lfErr" class="alert alert-danger d-none">Por favor revisa los campos marcados.</div>
+
+          <form id="lfForm" novalidate class="lf-form">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <input id="name" type="text" class="form-control lf-input" placeholder="Nombre" required
+                  pattern="^[A-Za-zÁÉÍÓÚÜÑáéíóúüñ ]{2,50}$" />
+              </div>
+              <div class="col-md-6">
+                <input id="email" type="email" class="form-control lf-input" placeholder="Correo" required />
+              </div>
+              <div class="col-md-6">
+                <input id="phone" type="tel" class="form-control lf-input" placeholder="Teléfono (opcional)" />
+              </div>
+              <div class="col-md-6">
+                <input id="project" type="text" class="form-control lf-input" placeholder="Asunto / Proyecto (opcional)" />
+              </div>
+              <div class="col-12">
+                <input id="subject" type="text" class="form-control lf-input" placeholder="Asunto" />
+              </div>
+              <div class="col-12">
+                <textarea id="message" class="form-control lf-input" rows="5" placeholder="Mensaje" required
+                  minlength="10"></textarea>
+              </div>
+              <div class="col-12">
+                <button id="lfBtn" type="submit" class="btn lf-btn w-100 py-3">Enviar mensaje</button>
+              </div>
             </div>
+          </form>
         </div>
-    </main>
-    <footer class="bg-light text-center text-lg-start mt-5 border-top">
-        <div class="container p-4">
-            <div class="row justify-content-center">
-                <div class="col-md-4 mb-3 mb-md-0">
-                    <h4 class="mb-3 color-principal">Contacto</h4>
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="#" class="text-decoration-none text-dark">
-                                <i class="fa fa-map-marker me-2" aria-hidden="true"></i>Duoc Antonio Varas
-                            </a>
-                        </li>
-                        <li class="mt-2">
-                            <a href="tel:+56912345678" class="text-decoration-none text-dark">
-                                <i class="fa fa-phone me-2" aria-hidden="true"></i>+56 9 1234 5678
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <a href="index.html"
-                        class="logo-footer d-block mb-2 fw-bold fs-4 color-principal text-decoration-none">LimpiFresh</a>
-                    <p class="text-muted mb-0">
-                        Productos de limpieza de alta calidad para tu hogar y negocio.<br>
-                        Soluciones ecológicas para mantener tus espacios impecables.
 
-                    </p>
-                </div>
-            </div>
+        
+        <div class="col-lg-6">
+          <div class="ratio ratio-4x3 ratio-lg-1x1">
+            <iframe
+              src="https://www.google.com/maps?q=Duoc%20UC%20Antonio%20Varas%2C%20Santiago&output=embed"
+              loading="lazy" class="rounded-3"></iframe>
+          </div>
         </div>
-    </footer>
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+      </div>
+
+      <div class="row g-3 mt-5">
+        <div class="col-sm-6 col-lg-3">
+          <div class="lf-card d-flex align-items-center p-3">
+            <i class="bi bi-geo-alt-fill lf-icon"></i>
+            <div><h6 class="mb-1">Dirección</h6><small>Duoc UC Antonio Varas, Santiago</small></div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="lf-card d-flex align-items-center p-3">
+            <i class="bi bi-envelope-fill lf-icon"></i>
+            <div><h6 class="mb-1">Mail</h6><small>contacto@limpifresh.cl</small></div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="lf-card d-flex align-items-center p-3">
+            <i class="bi bi-telephone-fill lf-icon"></i>
+            <div><h6 class="mb-1">Teléfono</h6><small>+56 9 1234 5678</small></div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-lg-3">
+          <div class="lf-card d-flex align-items-center p-3">
+            <i class="bi bi-clock-fill lf-icon"></i>
+            <div><h6 class="mb-1">Horario</h6><small>Lun–Sáb 10:00–19:00</small></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+ 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/contacto-limpifresh.js"></script>
 </body>
-
 </html>

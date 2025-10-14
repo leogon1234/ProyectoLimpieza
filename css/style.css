@@ -560,6 +560,7 @@ body {
   background: linear-gradient(180deg, #f8f9fa 0%, #ffffff 100%);
   border: 1px solid #e9ecef;
 }
+
 .about-hero-img {
   max-height: 260px;
   object-fit: contain;
@@ -571,24 +572,30 @@ body {
   border: 1px solid #e9ecef;
   transition: transform .2s ease, box-shadow .2s ease;
 }
+
 .service-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 10px 24px rgba(0,0,0,.08);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, .08);
 }
+
 .service-icon i {
-  font-size: 2rem;           /* tamaño icono */
-  color: var(--bs-teal);      /* puedes cambiar por tu color principal */
+  font-size: 2rem;
+  /* tamaño icono */
+  color: var(--bs-teal);
+  /* puedes cambiar por tu color principal */
 }
 
 /* Utilidades visuales */
 .sombra-suave {
-  box-shadow: 0 8px 24px rgba(0,0,0,.10);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .10);
   border: 1px solid #e9ecef;
 }
 
 /* Responsive menor */
 @media (max-width: 576px) {
-  .about-hero-img { max-height: 200px; }
+  .about-hero-img {
+    max-height: 200px;
+  }
 }
 
 /* === Añadidos del primer CSS: Pestañas de Detalle de Producto === */
@@ -596,7 +603,8 @@ body {
   color: #000 !important;
   background-color: #f8f9fa;
   border: 1px solid #dee2e6;
-  margin-bottom: -1px; /* se une visualmente con el contenido */
+  margin-bottom: -1px;
+  /* se une visualmente con el contenido */
 }
 
 #tabs-detalle .nav-link:hover,
@@ -608,5 +616,107 @@ body {
 #tabs-detalle .nav-link.active {
   color: #000 !important;
   background-color: #fff;
-  border-color: #dee2e6 #dee2e6 #fff; /* sin borde inferior */
+  border-color: #dee2e6 #dee2e6 #fff;
+  /* sin borde inferior */
 }
+
+/* ===== Colores LimpiFresh ===== */
+:root {
+  --lf-brand: #3f46ff;
+  --lf-brand-dark: #2e34d6;
+  --lf-icon-bg: #ebedff;
+  --lf-icon-fg: #3f46ff;
+}
+
+/* Navbar */
+.bg-brand {
+  background: var(--lf-brand) !important;
+}
+
+.lf-navbar .navbar-brand {
+  color: #fff;
+}
+
+.lf-navbar .nav-link {
+  color: #fff;
+  font-weight: 600;
+  opacity: 0.9;
+}
+
+.lf-navbar .nav-link:hover,
+.lf-navbar .nav-link.active {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+.lf-navbar .btn-light {
+  background: #fff;
+  color: #000;
+  font-weight: 500;
+  border: none;
+}
+
+.lf-navbar .btn-light:hover {
+  background: #f3f4ff;
+}
+
+.lf-navbar .badge {
+  font-size: 0.65rem;
+  padding: 0.3rem 0.4rem;
+}
+
+/* Main */
+.lf-eyebrow {
+  color: var(--lf-brand);
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.lf-title {
+  font-size: clamp(1.8rem, 1rem + 2vw, 2.6rem);
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.lf-form .lf-input {
+  border: 1px solid #e3e5ef;
+  border-radius: 0.6rem;
+  padding: 0.8rem;
+}
+
+.lf-form .lf-input:focus {
+  border-color: var(--lf-brand);
+  box-shadow: 0 0 0 0.2rem rgba(63, 70, 255, 0.15);
+}
+
+.lf-btn {
+  background: var(--lf-brand);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 0.6rem;
+}
+
+.lf-btn:hover {
+  background: var(--lf-brand-dark);
+}
+
+/* Tarjetas */
+.lf-card {
+  border: 1px solid #e3e5ef;
+  border-radius: 0.8rem;
+  background: #fff;
+  gap: 0.7rem;
+}
+
+.lf-icon {
+  background: var(--lf-icon-bg);
+  color: var(--lf-icon-fg);
+  border-radius: 50%;
+  font-size: 1.25rem;
+  width: 45px;
+  height: 45px;
+  display: grid;
+  place-items: center;
+}
+
