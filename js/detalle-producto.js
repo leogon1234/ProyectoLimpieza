@@ -221,6 +221,25 @@ const productos = [
       "País de Origen": "Chile",
       "Garantía Mínima Legal": "Válida hasta su fecha de caducidad"
     }
+  },
+  {
+    id: 13,
+    nombre: "Anti Sarro",
+    desc: "Elimina sarro y manchas.",
+    img: "img/anti-sarro.jpg",
+    precio: 5000,
+    oferta: true,
+    precioOferta: 4500,
+    descripcionLarga: "Elimina sarro y manchas difíciles.",
+    specs: {
+      "Tipo de Producto": "Desincrustantes",
+      "Cantidad": "500 ml",
+      "Formato": "Líquido",
+      "Envase": "Botella",
+      "Estado": "Líquido",
+      "País de Origen": "Chile",
+      "Garantía Mínima Legal": "Válida hasta su fecha de caducidad"
+    }
   }
 ];
 
