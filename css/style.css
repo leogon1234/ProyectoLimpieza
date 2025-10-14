@@ -505,3 +505,49 @@ body {
 .eye-btn:hover img {
   opacity: 1;
 }
+
+/*  Carrusel de marcas / productos destacados  */
+
+.carousel-marcas .carousel-inner {
+  background: #ffffff;
+  border-radius: 12px;
+}
+
+.carousel-marcas .slide-frame {
+  height: 380px;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.carousel-marcas .slide-img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  image-rendering: auto;
+}
+
+.carousel-marcas .carousel-caption {
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 10px;
+  padding: 10px 14px;
+}
+
+.carousel-marcas .carousel-control-prev-icon,
+.carousel-marcas .carousel-control-next-icon {
+  filter: invert(1);
+}
+
+@media (max-width: 576px) {
+  .carousel-marcas .slide-frame {
+    height: 280px;
+    padding: 10px;
+  }
+
+  .carousel-marcas .carousel-caption {
+    font-size: 0.9rem;
+    padding: 8px 10px;
+  }
+}
