@@ -1,6 +1,6 @@
 /* Color principal para títulos y enlaces destacados */
 .color-principal {
-  color: #2a9d8f !important;
+  color: #0f2faf !important;
 }
 
 /* Enlaces de productos sin subrayado y color heredado */
@@ -23,7 +23,7 @@
 
 /* Header y carrito estilos extraídos de los HTML */
 .header-tienda {
-  background: #2a9d8f;
+  background: #264eeb;
   color: white;
 }
 
