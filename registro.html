@@ -1,92 +1,90 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <title>Registro de usuario</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Registro - LimpiFresh</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/muha-auth.css" />
 </head>
 
-<body>
+<body class="mv-auth-page">
 
-    <header class="d-flex justify-content-between align-items-center px-3 py-2 header-tienda text-white">
-        <div>
-            <h1 class="mb-0 header-titulo text-white"><a href="index.html" class="titulo-limpifresh">LimpiFresh</a></h1>
-        </div>
-        <nav class="mx-auto">
-            <ul class="nav justify-content-center">
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="loginAdmin.html">Admin</a>
-                </li>
-            </ul>
-    </header>
-    <img src="img/logo.jpg" alt="Logo LIMPIFRESH" class="logo-limpifresh my-4">
+  <header>
+    <a href="index.html">LimpiFresh</a>
+  </header>
 
-    <main class="container my-5">
-        <div class="row justify-content-center">
-            <div class="col-md-6 col-lg-5">
-                <div class="card shadow">
-                    <div class="card-body">
-                        <h2 class="text-center mb-4">Registro</h2>
-                        <form id="registro">
-                            <div class="mb-3">
-                                <label for="nombreRegistro" class="form-label">Nombre</label>
-                                <input type="text" id="nombreRegistro" class="form-control" required
-                                    placeholder="Nombre">
-                            </div>
-                            <div class="mb-3">
-                                <label for="correoRegistro" class="form-label">Correo</label>
-                                <input type="email" id="correoRegistro" class="form-control" required
-                                    placeholder="Correo">
-                            </div>
-                            <div class="mb-3">
-                                <label for="contraseñaRegistro" class="form-label">Contraseña</label>
-                                <input type="password" id="contraseñaRegistro" class="form-control" required
-                                    placeholder="Contraseña">
-                            </div>
-                            <button type="submit" class="btn btn-success w-100">Registrarse</button>
-                        </form>
-                        <p id="mensajeRegistro" class="mensaje-error mt-2"></p>
-                        <p class="registro-enlace mt-3 text-center">¿Ya tienes una cuenta? <a href="login.html"
-                                class="si_tiene_cuenta">Inicia sesión</a></p>
-                    </div>
-                </div>
+  <main class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6">
+        <div class="card shadow mv-card mt-5">
+          <div class="card-body">
+            <h2 class="text-center mb-3 color-principal">Crea tu cuenta</h2>
+
+            <div class="mv-tabs">
+              <a class="mv-tab" href="login.html">Iniciar sesión</a>
+              <a class="mv-tab mv-active" href="registro.html">Registrarse</a>
             </div>
-        </div>
-    </main>
 
-    <footer class="bg-light text-center text-lg-start mt-5 border-top">
-        <div class="container p-4">
-            <div class="row justify-content-center">
-                <div class="col-md-4 mb-3 mb-md-0">
-                    <h4 class="mb-3 color-principal">Contacto</h4>
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="#" class="text-decoration-none text-dark">
-                                <i class="fa fa-map-marker me-2" aria-hidden="true"></i>Duoc Antonio Varas
-                            </a>
-                        </li>
-                        <li class="mt-2">
-                            <a href="tel:+56912345678" class="text-decoration-none text-dark">
-                                <i class="fa fa-phone me-2" aria-hidden="true"></i>+56 9 1234 5678
-                            </a>
-                        </li>
-                    </ul>
+            <form id="registro" novalidate>
+              <div class="mb-3">
+                <label for="nombreRegistro" class="form-label">Nombre</label>
+                <input type="text" id="nombreRegistro" class="form-control mv-input"
+                       placeholder="Nombre y Apellido" required
+                       pattern="^[A-Za-zÁÉÍÓÚÑáéíóúÜü ]+$" />
+              </div>
+
+              <div class="mb-3">
+                <label for="correoRegistro" class="form-label">Correo</label>
+                <input type="email" id="correoRegistro" class="form-control mv-input"
+                       placeholder="correo@ejemplo.cl" required />
+              </div>
+
+              <div class="mb-3">
+                <label for="contraseñaRegistro" class="form-label">Contraseña</label>
+                <input type="password" id="contraseñaRegistro" class="form-control mv-input"
+                       placeholder="Mínimo 8 caracteres" minlength="8" required />
+              </div>
+
+              <div class="mb-3">
+                <label for="rutRegistro" class="form-label">RUT</label>
+                <input type="text" id="rutRegistro" class="form-control mv-input"
+                       placeholder="12.345.678-5" />
+                <div class="form-text">Rut con dígito verificador</div>
+              </div>
+
+              <div class="row">
+                <div class="col-md-6 mb-3">
+                  <label for="regionRegistro" class="form-label">Región</label>
+                  <select id="regionRegistro" class="form-select mv-input" required>
+                    <option value="">Selecciona una región…</option>
+                  </select>
                 </div>
-                <div class="col-md-4">
-                    <a href="index.html" class="logo-footer d-block mb-2 fw-bold fs-4 color-principal text-decoration-none">LimpiFresh</a>
-                    <p class="text-muted mb-0">
-                        Productos de limpieza de alta calidad para tu hogar y negocio.<br>
-                        Soluciones ecológicas para mantener tus espacios impecables.
-                    </p>
+                <div class="col-md-6 mb-3">
+                  <label for="comunaRegistro" class="form-label">Comuna</label>
+                  <select id="comunaRegistro" class="form-select mv-input" required disabled>
+                    <option value="">Selecciona una comuna…</option>
+                  </select>
                 </div>
-            </div>
+              </div>
+
+              <button type="submit" class="mv-btn">Registrarse</button>
+              <p id="mensajeRegistro" class="mt-3 text-center mv-hint"></p>
+
+              <p class="text-center mt-3">
+                ¿Ya tienes cuenta? <a class="mv-link" href="login.html">Inicia sesión</a>
+              </p>
+            </form>
+
+          </div>
         </div>
-    </footer>
-    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="js/app.js"></script>
+      </div>
+    </div>
+  </main>
+
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+  </script>
+  <script src="js/app.js"></script>
 </body>
-
 </html>
