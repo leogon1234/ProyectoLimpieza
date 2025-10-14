@@ -1,90 +1,65 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Iniciar Sesion</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iniciar sesión - LimpiFresh</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/muha-auth.css" />
 </head>
 
-<body>
-    <header class="d-flex justify-content-between align-items-center px-3 py-2 header-tienda text-white">
-        <div>
-            <h1 class="mb-0 header-titulo text-white">LimpiFresh</h1>
-        </div>
-        <nav class="mx-auto">
-            <ul class="nav justify-content-center">
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="index.html">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="loginAdmin.html">Admin</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <img src="img/logo.jpg" alt="Logo LIMPIFRESH" class="logo-limpifresh my-4">
-    <main class="container my-5">
-        <div class="row justify-content-center">
-            <div class="col-md-6 col-lg-5">
-                <div class="card shadow">
-                    <div class="card-body">
-                        <h2 class="text-center mb-4">Iniciar Sesión</h2>
-                        <form id="login">
-                            <div class="mb-3">
-                                <label for="correoLogin" class="form-label">Correo</label>
-                                <input type="email" name="correoLogin" id="correoLogin" class="form-control"
-                                    placeholder="Correo" required>
-                            </div>
-                            <div class="mb-3">
-                                <label for="contraseñaLogin" class="form-label">Contraseña</label>
-                                <input type="password" name="contraseñaLogin" id="contraseñaLogin" class="form-control"
-                                    placeholder="Contraseña" required>
-                            </div>
-                            <button type="submit" class="btn btn-success w-100">Iniciar Sesión</button>
-                            <p id="mensajeLogin" class="mensaje-error mt-2"></p>
-                            <p class="registro-enlace mt-3 text-center">¿No tienes una cuenta? <a href="registro.html"
-                                    class="si_tiene_cuenta">Regístrate</a></p>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </main>
+<body class="mv-auth-page">
+  <header>
+    <a href="index.html">LimpiFresh</a>
+  </header>
 
-    <footer class="bg-light text-center text-lg-start mt-5 border-top">
-        <div class="container p-4">
-            <div class="row justify-content-center">
-                <div class="col-md-4 mb-3 mb-md-0">
-                    <h4 class="mb-3 color-principal">Contacto</h4>
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="#" class="text-decoration-none text-dark">
-                                <i class="fa fa-map-marker me-2" aria-hidden="true"></i>Duoc Antonio Varas
-                            </a>
-                        </li>
-                        <li class="mt-2">
-                            <a href="tel:+56912345678" class="text-decoration-none text-dark">
-                                <i class="fa fa-phone me-2" aria-hidden="true"></i>+56 9 1234 5678
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <a href="index.html"
-                        class="logo-footer d-block mb-2 fw-bold fs-4 color-principal text-decoration-none">LimpiFresh</a>
-                    <p class="text-muted mb-0">
-                        Productos de limpieza de alta calidad para tu hogar y negocio.<br>
-                        Soluciones ecológicas para mantener tus espacios impecables.
-                    </p>
-                </div>
+  <main class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-7 col-lg-5">
+        <div class="card shadow mv-card mt-5">
+          <div class="card-body">
+            <h2 class="text-center mb-3 color-principal">Bienvenido a LimpiFresh</h2>
+            <div class="mv-tabs">
+              <a class="mv-tab mv-active" href="login.html">Iniciar sesión</a>
+              <a class="mv-tab" href="registro.html">Registrarse</a>
             </div>
+            <form id="login" novalidate>
+              <div class="mb-3">
+                <label for="correoLogin" class="form-label">Correo</label>
+                <input type="email" name="correoLogin" id="correoLogin"
+                       class="form-control mv-input" placeholder="Ingresa tu correo" required />
+              </div>
+
+              <div class="mb-3 password-container">
+                <div class="label-row">
+                  <label for="contraseñaLogin" class="form-label">Contraseña</label>
+                  <button type="button" id="togglePassword" class="eye-btn" aria-label="Mostrar contraseña">
+                    <img src="img/ojocerrado.png" alt="" id="eyeIcon">
+                    <span id="eyeText">Mostrar contraseña</span>
+                  </button>
+                </div>
+                <input type="password" name="contraseñaLogin" id="contraseñaLogin"
+                       class="form-control mv-input" placeholder="Ingresa tu contraseña" minlength="8" required />
+              </div>
+
+              <button type="submit" class="mv-btn">Ingresar</button>
+              <p id="mensajeLogin" class="mt-3 text-center mv-hint"></p>
+
+              <p class="text-center mt-3">
+                <a class="mv-link" href="index.html">← Volver al inicio</a>
+              </p>
+            </form>
+
+          </div>
         </div>
-    </footer>
-    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="js/app.js"></script>
+      </div>
+    </div>
+  </main>
+
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="js/app.js"></script>
+
+  
 </body>
-
 </html>

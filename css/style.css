@@ -2,35 +2,44 @@
 .color-principal {
   color: #2a9d8f !important;
 }
+
 /* Enlaces de productos sin subrayado y color heredado */
 .link-producto {
   text-decoration: none;
   color: inherit;
 }
-.link-producto:hover, .link-producto:focus {
+
+.link-producto:hover,
+.link-producto:focus {
   text-decoration: none;
   color: inherit;
 }
+
 /* Input cantidad en detalle-producto */
 .input-cantidad {
   width: 100px;
   display: inline-block;
 }
+
 /* Header y carrito estilos extraídos de los HTML */
 .header-tienda {
   background: #2a9d8f;
   color: white;
 }
+
 .header-titulo {
   font-size: 1.5rem;
 }
+
 .carrito-contador-badge {
   font-size: 0.9rem;
 }
+
 .carrito-iva-text {
   color: #555;
   font-size: 0.95rem;
 }
+
 /* Carrito: Subtotal e IVA en columna */
 .carrito-iva-col {
   display: flex;
@@ -38,10 +47,12 @@
   align-items: flex-end;
   gap: 0.1em;
 }
+
 .carrito-iva-item {
   color: #888;
   font-size: 1.05em;
 }
+
 body {
   background-color: #fafafa;
 }
@@ -104,6 +115,7 @@ header h1 {
 .detalle-container {
   margin-top: 2rem;
 }
+
 .detalle-img {
   width: 100%;
   max-width: 400px;
@@ -113,22 +125,26 @@ header h1 {
   border-radius: 0.5rem;
   padding: 1rem;
 }
+
 .detalle-precio {
   font-size: 2.2rem;
   font-weight: bold;
   color: #28a745;
 }
+
 .detalle-precio-oferta {
   color: #dc3545;
   font-size: 2.2rem;
   font-weight: bold;
 }
+
 .detalle-precio-tachado {
   text-decoration: line-through;
   color: #6c757d;
   font-size: 1.4rem;
   margin-right: 10px;
 }
+
 .detalle-id {
   font-size: 0.9rem;
   color: #888;
@@ -155,7 +171,7 @@ header h1 {
   font-size: 0.9rem;
 }
 
-.titulo-limpifresh{
+.titulo-limpifresh {
   text-decoration: none;
   color: white;
 }
@@ -164,9 +180,9 @@ header h1 {
   width: 100%;
   background-color: #2a9d8f;
   color: white;
-  padding: 52px 0 ;
+  padding: 52px 0;
   text-align: center;
-  margin-top: 40px ;
+  margin-top: 40px;
 }
 
 .contacto-footer a {
@@ -180,16 +196,21 @@ header h1 {
 }
 
 .logo-limpifresh {
-  max-width: 150px;   /* tamaño máximo */
-  width: 50%;         /* ancho relativo en móviles */
-  height: 100%;       /* mantiene proporción */
+  max-width: 150px;
+  /* tamaño máximo */
+  width: 50%;
+  /* ancho relativo en móviles */
+  height: 100%;
+  /* mantiene proporción */
   display: block;
-  margin: 100px auto;  /* centrado vertical y horizontal */
+  margin: 100px auto;
+  /* centrado vertical y horizontal */
 }
 
 /* Botón de pago del carrito  */
 .btn-pagar {
-  background-color: #2f8b82;  /* Verde LimpiFresh */
+  background-color: #2f8b82;
+  /* Verde LimpiFresh */
   color: #fff;
   font-weight: 600;
   padding: 10px 25px;
@@ -200,6 +221,287 @@ header h1 {
 }
 
 .btn-pagar:hover {
-  background-color: #26736c;  /* tono más oscuro al pasar el mouse */
+  background-color: #26736c;
+  /* tono más oscuro al pasar el mouse */
   color: #fff;
+}
+
+/* === Limpifresh Auth minimalista === */
+:root {
+  --lf-primary: #2a9d8f;
+  --lf-primary-dark: #207a72;
+  --lf-bg: #f9f9f9;
+  --lf-surface: #ffffff;
+  --lf-border: #dcdcdc;
+  --lf-text: #333;
+  --lf-muted: #666;
+}
+
+/* Fondo general */
+.mv-auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--lf-bg);
+  padding: 24px;
+}
+
+/* Oculta el header si se desea pantalla limpia */
+.mv-auth-hide-header .header-tienda {
+  display: none !important;
+}
+
+/* Tarjeta principal */
+.mv-card {
+  width: 100%;
+  max-width: 520px;
+  /* mismo ancho para login y registro */
+  background: var(--lf-surface);
+  border: 1px solid var(--lf-border);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+  color: var(--lf-text);
+  padding: 32px 26px;
+  margin: 0 auto;
+}
+
+/* Centrado del contenido */
+.mv-card .card-body,
+.mv-card form {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* Título */
+.mv-card h2 {
+  text-align: center;
+  font-weight: 700;
+  color: var(--lf-primary);
+  margin-bottom: 20px;
+}
+
+/* Tabs superiores */
+.mv-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.mv-tab {
+  border: 1px solid var(--lf-border);
+  border-radius: 8px;
+  padding: 6px 14px;
+  text-decoration: none;
+  color: var(--lf-primary);
+  font-weight: 600;
+  background: white;
+  transition: all 0.2s ease;
+}
+
+.mv-tab:hover {
+  background: #e8f6f3;
+}
+
+.mv-tab.mv-active {
+  background: var(--lf-primary);
+  color: white;
+  border-color: var(--lf-primary);
+}
+
+/* Inputs */
+.mv-input.form-control,
+.mv-input.form-select {
+  background: #fff;
+  border: 1px solid var(--lf-border);
+  border-radius: 8px;
+  color: var(--lf-text);
+  height: 46px;
+  transition: border-color 0.2s ease;
+}
+
+.mv-input::placeholder {
+  color: #999;
+}
+
+.mv-input:focus {
+  border-color: var(--lf-primary);
+  box-shadow: 0 0 0 0.15rem rgba(42, 157, 143, 0.25);
+}
+
+/* Botón principal */
+.mv-btn {
+  background: var(--lf-primary);
+  border: none;
+  color: white;
+  font-weight: 700;
+  height: 46px;
+  border-radius: 8px;
+  width: 100%;
+  transition: background 0.2s ease;
+}
+
+.mv-btn:hover {
+  background: var(--lf-primary-dark);
+}
+
+/* Textos pequeños */
+.mv-hint {
+  color: var(--lf-muted);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Enlaces */
+.mv-link {
+  color: var(--lf-primary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.mv-link:hover {
+  text-decoration: underline;
+}
+
+/* Ajuste para pantallas pequeñas */
+@media (max-width: 576px) {
+  .mv-card {
+    max-width: 90%;
+    padding: 24px 20px;
+  }
+}
+
+/*  Barra superior  */
+header {
+  width: 100%;
+  background-color: #2a9d8f;
+  color: #fff;
+  text-align: center;
+  padding: 0.8rem 0;
+  font-size: 1.4rem;
+  letter-spacing: .5px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, .08);
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+  /* sin subrayado */
+  font-weight: 400;
+  /* sin negrita */
+  transition: opacity .2s ease;
+}
+
+header a:hover,
+header a:focus,
+header a:active {
+  text-decoration: none;
+  opacity: .85;
+}
+
+/* cuerpo */
+body {
+  background: #fafafa;
+  padding-top: 80px;
+}
+
+.mv-card {
+  border: none;
+  border-radius: 12px;
+}
+
+
+/* Barra superior */
+header {
+  width: 100%;
+  background-color: #2a9d8f;
+  color: white;
+  text-align: center;
+  padding: 0.8rem 0;
+  font-size: 1.4rem;
+  letter-spacing: 0.5px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  font-weight: 400;
+  transition: opacity 0.2s ease;
+}
+
+header a:hover,
+header a:focus,
+header a:active {
+  text-decoration: none;
+  opacity: 0.85;
+}
+
+body {
+  background-color: #fafafa;
+  padding-top: 80px;
+}
+
+.mv-card {
+  border: none;
+  border-radius: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.mv-tabs a {
+  pointer-events: auto !important;
+}
+
+/*  Mostrar/Ocultar contraseña    */
+.password-container {
+  position: relative;
+}
+
+.label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 6px;
+}
+
+.eye-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  color: #2a9d8f;
+  padding: 2px 4px;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.eye-btn:hover {
+  background: #e3f3f0;
+  color: #238779;
+}
+
+.eye-btn img {
+  width: 20px;
+  height: 20px;
+  opacity: 0.85;
+  transition: opacity 0.2s ease;
+}
+
+.eye-btn:hover img {
+  opacity: 1;
 }
