@@ -6,11 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/nosotros.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
     <title>Nosotros</title>
 </head>
 
 <body>
+
     <header class="d-flex justify-content-between align-items-center px-3 py-2 header-tienda">
         <div>
             <h1 class="mb-0 header-titulo"><a href="index.html" class="titulo-limpifresh">LimpiFresh</a></h1>
@@ -21,10 +23,10 @@
                     <a class="nav-link" href="index.html">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="productos.html">Productos</a>
+                    <a class="nav-link active" href="Productos.html">Productos</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="ofertas.html">Ofertas</a>
+                    <a class="nav-link" href="Ofertas.html">Ofertas</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="nosotros.html">Nosotros</a>
@@ -51,16 +53,67 @@
     </header>
 
     <main class="container my-5">
-        <div class="text-center mb-5">
-            <h2 class="fw-bold color-principal">Sobre Nosotros</h2>
-            <p class="lead mt-3">
-                En LimpiFresh nos especializamos en productos de limpieza sustentables para
-                el hogar.<br>
-                Nuestro objetivo es entregar calidad y cuidar el medio ambiente. Todos nuestros productos están hechos
-                con ingredientes biodegradables.
-            </p>
-        </div>
-        <div class="mb-4">
+
+        <section class="about-hero rounded-4 p-4 p-md-5 mb-5">
+            <div class="row align-items-center g-4">
+                <div class="col-lg-7">
+                    <h2 class="fw-bold color-principal mb-3">Sobre Nosotros</h2>
+                    <p class="lead mb-0">
+                        En LimpiFresh nos especializamos en productos de limpieza sustentables para el hogar.
+                        Nuestro objetivo es entregar calidad y cuidar el medio ambiente. Todos nuestros productos están
+                        hechos con ingredientes biodegradables.
+                    </p>
+                </div>
+                <div class="col-lg-5 text-center">
+                    <img src="img/sobrenosotros.jpg" alt="Ilustración Sobre Nosotros" class="img-fluid about-hero-img">
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h3 class="fw-semibold text-center mb-4">Nuestros Servicios</h3>
+            <div class="row g-4 justify-content-center">
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="service-card h-100 text-center p-4 rounded-4">
+                        <div class="service-icon mb-2"><i class="bi bi-percent"></i></div>
+                        <a href="ofertas.html" class="text-decoration-none fw-semibold text-dark">Ofertas</a>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="service-card h-100 text-center p-4 rounded-4">
+                        <div class="service-icon mb-2"><i class="bi bi-person"></i></div>
+                        <a href="contacto.html" class="text-decoration-none fw-semibold text-dark">Atención 24/7</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+
+
+        <section class="mb-5">
+            <div class="row align-items-center g-4">
+                <div class="col-md-6">
+                    <h3 class="fw-semibold mb-3">FreshComunity</h3>
+                    <p class="mb-0">
+                        En Limpifresh somos más que una tienda de limpieza: somos parte de FreshComunity, una comunidad
+                        comprometida con el bienestar, la higiene y el cuidado de nuestros espacios compartidos.
+
+                        Creemos que la limpieza no solo transforma lugares, sino también la forma en que vivimos. Por
+                        eso trabajamos día a día para ofrecerte productos de calidad, precios justos y un servicio
+                        cercano, pensado para hogares, negocios y comunidades que valoran el orden y la frescura.
+                    </p>
+                </div>
+                <div class="col-md-6 text-center">
+                    <img src="img/freshcomunity.jpg" alt="imagen limpifresh" class="img-fluid rounded-4 sombra-suave"
+                        width="80%">
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-4">
             <h3 class="fw-semibold text-center mb-4">El equipo de desarrolladores</h3>
             <div class="row justify-content-center g-4">
                 <div class="col-md-4">
@@ -83,9 +136,21 @@
                         </div>
                     </div>
                 </div>
+                <div class="col-md-4">
+                    <div class="card h-100 shadow text-center border-0">
+                        <img src="img/rostro.jpg" alt="Alonso" class="card-img-top rounded-circle mx-auto mt-4"
+                            width="120" height="120" style="object-fit:cover;">
+                        <div class="card-body">
+                            <h4 class="card-title mb-1">Alonso Carrasco</h4>
+                            <p class="card-text text-muted">Desarrollador backend y frontend</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
+
     </main>
+
     <footer class="bg-light text-center text-lg-start mt-5 border-top">
         <div class="container p-4">
             <div class="row justify-content-center">
@@ -115,6 +180,7 @@
             </div>
         </div>
     </footer>
+
     <script src="bootstrap/js/bootstrap.min.js"></script>
 </body>
 

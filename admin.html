@@ -2,135 +2,141 @@
 <html lang="es">
 
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <title>Administacion LimpiFresh</title>
-    <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
-    <link href="css/styleAdmin.css" rel="stylesheet" />
-    <link rel="stylesheet" href="css/style.css">
-    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <title>Administración LimpiFresh</title>
+  <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
+  <link href="css/styleAdmin.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css">
+  <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+
 </head>
 
-<body class="sb-nav-fixed">
-    <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
-    </nav>
-    <div id="layoutSidenav">
-        <div id="layoutSidenav_nav">
-            <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
-                <div class="sb-sidenav-menu">
-                    <div class="nav">
-                        <p class="titulo"><a href="index.html" class="titulo-limpifresh">LimpiFresh</a></p>
-                        <div class="sb-sidenav-menu-heading">Atajos</div>
-                        <a class="nav-link" href="index.html">
-                            <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
-                            Pagina principal
-                        </a>
-                        <div class="sb-sidenav-menu-heading">Paginas</div>
-                        <a class="nav-link" href="registro.html">
-                            <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
-                            Registro
-                        </a>
-                        <a class="nav-link" href="login.html">
-                            <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                            Inicio sesion
-                        </a>
-                    </div>
-                </div>
-            </nav>
-        </div>
-        <div id="layoutSidenav_content">
-            <main>
-                <div class="container-fluid px-4">
-                    <h1 class="mt-4">Gestión de Productos</h1>
-                    <ol class="breadcrumb mb-4">
-                        <li class="breadcrumb-item active">Panel Administrador</li>
-                    </ol>
-
-                    <div class="card mb-4">
-                        <div class="card-header">
-                            <i class="fas fa-plus me-1"></i>
-                            Agregar Producto
-                        </div>
-                        <div class="card-body">
-                            <form id="formProducto" class="row g-3">
-                                <div class="col-md-6">
-                                    <input type="text" id="nombre" class="form-control"
-                                        placeholder="Nombre del producto" required>
-                                </div>
-                                <div class="col-md-4">
-                                    <input type="number" id="precio" class="form-control" placeholder="Precio" required>
-                                </div>
-                                <div class="col-md-2">
-                                    <button type="submit" class="btn btn-success w-100">Agregar</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-
-                    <div class="card mb-4">
-                        <div class="card-header">
-                            <i class="fas fa-table me-1"></i>
-                            Lista de Productos
-                        </div>
-                        <div class="card-body">
-                            <table id="tablaProductos" class="table table-striped">
-                                <thead>
-                                    <tr>
-                                        <th>Producto</th>
-                                        <th>Precio</th>
-                                        <th>Acciones</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </main>
-        </div>
+<body class="bg-light">
+  <header class="header-admin">
+    <div class="contenedor-header">
+      <h1 class="logo">
+        <a href="index.html">LimpiFresh</a>
+      </h1>
+      <nav class="navegacion">
+        <ul class="lista-menu">
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="blogs.html">Blogs</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+      <div class="icono-usuario">
+        <img src="img/iconoUsuario.jpg" alt="Icono de usuario">
+      </div>
     </div>
-    <footer class="bg-light text-center text-lg-start mt-5 border-top">
-        <div class="container p-4">
-            <div class="row justify-content-center">
-                <div class="col-md-4 mb-3 mb-md-0">
-                    <h4 class="mb-3 color-principal">Contacto</h4>
-                    <ul class="list-unstyled">
-                        <li>
-                            <a href="#" class="text-decoration-none text-dark">
-                                <i class="fa fa-map-marker me-2" aria-hidden="true"></i>Duoc Antonio Varas
-                            </a>
-                        </li>
-                        <li class="mt-2">
-                            <a href="tel:+56912345678" class="text-decoration-none text-dark">
-                                <i class="fa fa-phone me-2" aria-hidden="true"></i>+56 9 1234 5678
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <a href="index.html"
-                        class="logo-footer d-block mb-2 fw-bold fs-4 color-principal text-decoration-none">LimpiFresh</a>
-                    <p class="text-muted mb-0">
-                        Productos de limpieza de alta calidad para tu hogar y negocio.<br>
-                        Soluciones ecológicas para mantener tus espacios impecables.
-                    </p>
-                </div>
-            </div>
+  </header>
+
+  <div class="container mt-5">
+    <h1 class="text-center mb-4">Panel de Administración</h1>
+
+    <div class="card shadow-sm p-4">
+      <h2 class="mb-3">Agregar / Editar Producto</h2>
+
+      <form>
+        <div class="mb-3">
+          <p class="form-label">Nombre del producto</p>
+          <input type="text" class="form-control">
         </div>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-        crossorigin="anonymous"></script>
-    <script src="js/scripts.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-    <script src="assets/demo/chart-area-demo.js"></script>
-    <script src="assets/demo/chart-bar-demo.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js"
-        crossorigin="anonymous"></script>
-    <script src="js/datatables-simple-demo.js"></script>
+
+        <div class="mb-3">
+          <p class="form-label">Descripción</p>
+          <textarea class="form-control" rows="3"></textarea>
+        </div>
+
+        <div class="mb-3 row">
+          <div class="col-md-6">
+            <p class="form-label">Precio del producto</p>
+            <input type="number" class="form-control">
+          </div>
+          <div class="col-md-6">
+            <p class="form-label">Stock</p>
+            <input type="number" class="form-control">
+          </div>
+        </div>
+
+        <div class="text-end">
+          <button type="submit" class="btn btn-success">Guardar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="card mt-5 shadow-sm p-4">
+    <h4 class="mb-3">Productos</h4>
+    <table class="table table-striped">
+      <thead class="table-dark">
+        <tr>
+          <th>Nombre</th>
+          <th>Precio</th>
+          <th>IVA</th>
+          <th>Precio con IVA</th>
+          <th>Stock</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Detergente líquido</td>
+          <td>$2500</td>
+          <td>19%</td>
+          <td>$2975</td>
+          <td>100</td>
+          <td>
+            <button class="btn btn-sm btn-primary">Editar</button>
+            <button class="btn btn-sm btn-danger">Eliminar</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <footer class="bg-light text-center text-lg-start mt-5 border-top">
+    <div class="container p-4">
+      <div class="row justify-content-center">
+        <div class="col-md-4 mb-3 mb-md-0">
+          <h4 class="mb-3 color-principal">Contacto</h4>
+          <ul class="list-unstyled">
+            <li>
+              <a href="#" class="text-decoration-none text-dark">
+                <i class="fa fa-map-marker me-2" aria-hidden="true"></i>Duoc Antonio Varas
+              </a>
+            </li>
+            <li class="mt-2">
+              <a href="tel:+56912345678" class="text-decoration-none text-dark">
+                <i class="fa fa-phone me-2" aria-hidden="true"></i>+56 9 1234 5678
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <a href="index.html" class="logo-footer d-block mb-2 fw-bold fs-4 color-principal text-decoration-none">LimpiFresh</a>
+          <p class="text-muted mb-0">
+            Productos de limpieza de alta calidad para tu hogar y negocio.<br>
+            Soluciones ecológicas para mantener tus espacios impecables.
+          </p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="js/scripts.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
+  <script src="assets/demo/chart-area-demo.js"></script>
+  <script src="assets/demo/chart-bar-demo.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js"
+    crossorigin="anonymous"></script>
+  <script src="js/datatables-simple-demo.js"></script>
+  <script src="js/administrador.js"></script>
 </body>
 
 </html>
