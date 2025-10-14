@@ -106,6 +106,15 @@ const productos = [
     precio: 3200,
     oferta: true,
     precioOferta: 2800
+  },
+  {
+    id: 13,
+    nombre: "Anti-Sarro",
+    desc: "Elimina manchas difíciles.",
+    img: "img/anti-sarro.jpg",
+    precio: 5200,
+    oferta: true,
+    precioOferta: 4800
   }
 ];
 
