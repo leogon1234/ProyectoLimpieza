@@ -50,10 +50,22 @@
   </header>
 
   <main class="container my-4">
-    <h2>Productos</h2>
+    <div class="row">
+      <!-- Filtros de productos -->
+      <div class="col-md-3">
+        <h2 class="mb-3">Filtros</h2>
+        <select class="form-select" id="filtroProductos">
+          <option value="todos">Todos los productos</option>
+          <option value="limpiadores">Limpiadores</option>
+          <option value="implementos">Implementos</option>
+          <option value="desechables">Desechables</option>
+        </select>
+      </div>
+      <div class="col-md-9">
+        <h2>Productos</h2>
     <section class="row g-4">
       <!-- Producto 1 -->
-      <div class="col-md-4">
+      <div class="col-md-4" data-category="limpiadores">
         <a href="detalle-producto.html?id=1" class="link-producto">
           <div class="card h-100 shadow-sm position-relative">
             <img src="img/Detergente.jpg" class="card-img-top" alt="Detergente" />
@@ -69,7 +81,7 @@
       </div>
 
       <!-- Producto 2 (Oferta) -->
-      <div class="col-md-4">
+      <div class="col-md-4" data-category="limpiadores">
         <a href="detalle-producto.html?id=2" class="link-producto">
           <div class="card h-100 shadow-sm position-relative">
             <span class="badge-sale">Descuento</span>
@@ -274,6 +286,8 @@
         </a>
       </div>
     </section>
+      </div>
+    </div>
   </main>
   <footer class="bg-light text-center text-lg-start mt-5 border-top">
     <div class="container p-4">
@@ -306,6 +320,7 @@
   </footer>
   <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="js/carrito.js"></script>
+  <script src="js/filtro-productos.js"></script>
 </body>
 
 </html>
