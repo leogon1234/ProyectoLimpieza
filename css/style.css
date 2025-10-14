@@ -590,3 +590,23 @@ body {
 @media (max-width: 576px) {
   .about-hero-img { max-height: 200px; }
 }
+
+/* === Añadidos del primer CSS: Pestañas de Detalle de Producto === */
+#tabs-detalle .nav-link {
+  color: #000 !important;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  margin-bottom: -1px; /* se une visualmente con el contenido */
+}
+
+#tabs-detalle .nav-link:hover,
+#tabs-detalle .nav-link:focus {
+  color: #000 !important;
+  background-color: #ffffff;
+}
+
+#tabs-detalle .nav-link.active {
+  color: #000 !important;
+  background-color: #fff;
+  border-color: #dee2e6 #dee2e6 #fff; /* sin borde inferior */
+}
