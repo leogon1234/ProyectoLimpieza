@@ -57,7 +57,8 @@ document.addEventListener('DOMContentLoaded', function () {
         { id: 9, nombre: "Limpiapisos", img: "img/limpiapisos.jpg", precio: 3500, oferta: true, precioOferta: 3000 },
         { id: 10, nombre: "Cepillo de Limpieza", img: "img/cepillo.jpg", precio: 1800, oferta: false, precioOferta: null },
         { id: 11, nombre: "Bolsas de Basura", img: "img/bolsas.jpg", precio: 1500, oferta: false, precioOferta: null },
-        { id: 12, nombre: "Limpiador Multiuso", img: "img/limpiador-multiuso.jpg", precio: 3200, oferta: true, precioOferta: 2800 }
+        { id: 12, nombre: "Limpiador Multiuso", img: "img/limpiador-multiuso.jpg", precio: 3200, oferta: true, precioOferta: 2800 },
+        { id: 13, nombre: "Anti Sarro", img: "img/anti-sarro.jpg", precio: 5000, oferta: true, precioOferta: 4500 }
     ];
 
     function mostrarOfertas() {
