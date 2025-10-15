@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pago - LimpiFresh</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+</head>
+
+<body>
+    <header class="d-flex justify-content-between align-items-center px-3 py-2 header-tienda">
+        <div>
+            <h1 class="mb-0 header-titulo"><a href="index.html" class="titulo-limpifresh">LimpiFresh</a></h1>
+        </div>
+        <nav class="mx-auto">
+            <ul class="nav justify-content-center">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="productos.html">Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Ofertas.html">Ofertas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="nosotros.html">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-white" href="blogs.html">Blogs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contacto.html">Contacto</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="d-flex align-items-center gap-2">
+            <a href="login.html" class="btn btn-light" title="Mi cuenta">
+                <i class="bi bi-person"></i>
+            </a>
+            <a href="carrito.html" class="btn btn-light position-relative" id="carrito-header-btn">
+                <i class="bi bi-cart"></i>
+                <span>Carrito</span>
+                <span class="badge bg-danger position-absolute top-0 start-100 translate-middle"
+                    id="carrito-contador">0</span>
+            </a>
+        </div>
+    </header>
+
+    <main class="container my-5">
+        <div class="row">
+            <div class="col-md-4 order-md-2 mb-4">
+                <h4 class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="text-primary">Tu carrito</span>
+                    <span class="badge bg-primary rounded-pill" id="total-items">0</span>
+                </h4>
+                <ul class="list-group mb-3" id="resumen-carrito">
+                </ul>
+                <div class="list-group-item d-flex justify-content-between bg-light">
+                    <strong>Total a pagar</strong>
+                    <strong id="total-precio" class="text-primary">$0</strong>
+                </div>
+            </div>
+
+            <div class="col-md-8 order-md-1">
+                <h4 class="mb-3">Información de pago</h4>
+                <form id="formulario-pago" class="needs-validation" novalidate>
+                    <div class="row g-3">
+                        <div class="col-sm-6">
+                            <label for="firstName" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="firstName" required>
+                            <div class="invalid-feedback">
+                                El nombre es requerido.
+                            </div>
+                        </div>
+
+                        <div class="col-sm-6">
+                            <label for="lastName" class="form-label">Apellido</label>
+                            <input type="text" class="form-control" id="lastName" required>
+                            <div class="invalid-feedback">
+                                El apellido es requerido.
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="tu@ejemplo.com" required>
+                            <div class="invalid-feedback">
+                                Por favor ingresa un email válido.
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <label for="address" class="form-label">Dirección</label>
+                            <input type="text" class="form-control" id="address" required>
+                            <div class="invalid-feedback">
+                                Por favor ingresa tu dirección de envío.
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="region" class="form-label">Región</label>
+                            <select class="form-select" id="region" required>
+                                <option value="">Seleccionar...</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Por favor selecciona una región.
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="comuna" class="form-label">Comuna</label>
+                            <select class="form-select" id="comuna" required disabled>
+                                <option value="">Seleccionar...</option>
+                            </select>
+                            <div class="invalid-feedback">
+                                Por favor selecciona una comuna.
+                            </div>
+                        </div>
+
+                        <hr class="my-4">
+
+                        <h4 class="mb-3">Método de pago</h4>
+
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input type="radio" name="metodoPago" class="form-check-input" id="credito" required>
+                                <label class="form-check-label" for="credito">Tarjeta de crédito</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" name="metodoPago" class="form-check-input" id="debito" required>
+                                <label class="form-check-label" for="debito">Tarjeta de débito</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="radio" name="metodoPago" class="form-check-input" id="transferencia" required>
+                                <label class="form-check-label" for="transferencia">Transferencia bancaria</label>
+                            </div>
+                        </div>
+
+                        <div id="tarjeta-campos" class="d-none">
+                            <div class="col-md-6">
+                                <label for="cc-number" class="form-label">Número de tarjeta</label>
+                                <input type="text" class="form-control" id="cc-number" required>
+                                <div class="invalid-feedback">
+                                    El número de tarjeta es requerido
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <label for="cc-expiration" class="form-label">Vencimiento</label>
+                                    <input type="text" class="form-control" id="cc-expiration" placeholder="MM/YY" required>
+                                    <div class="invalid-feedback">
+                                        La fecha de vencimiento es requerida
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <label for="cc-cvv" class="form-label">CVV</label>
+                                    <input type="text" class="form-control" id="cc-cvv" required>
+                                    <div class="invalid-feedback">
+                                        El código de seguridad es requerido
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button class="w-100 btn btn-primary btn-lg" type="submit">Confirmar compra</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-light text-center text-lg-start mt-5 border-top">
+        <div class="container p-4">
+            <div class="row justify-content-center">
+                <div class="col-md-4 mb-3 mb-md-0">
+                    <h4 class="mb-3 color-principal">Contacto</h4>
+                    <ul class="list-unstyled">
+                        <li>
+                            <a href="#" class="text-decoration-none text-dark">
+                                <i class="fa fa-map-marker me-2" aria-hidden="true"></i>Duoc Antonio Varas
+                            </a>
+                        </li>
+                        <li class="mt-2">
+                            <a href="tel:+56912345678" class="text-decoration-none text-dark">
+                                <i class="fa fa-phone me-2" aria-hidden="true"></i>+56 9 1234 5678
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <a href="index.html"
+                        class="logo-footer d-block mb-2 fw-bold fs-4 color-principal text-decoration-none">LimpiFresh</a>
+                    <p class="text-muted mb-0">
+                        Productos de limpieza de alta calidad para tu hogar y negocio.<br>
+                        Soluciones ecológicas para mantener tus espacios impecables.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/carrito.js"></script>
+    <script src="js/pago.js"></script>
+</body>
+
+</html>

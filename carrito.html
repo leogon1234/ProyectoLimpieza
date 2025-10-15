@@ -100,7 +100,7 @@
     document.addEventListener('click', (e) => {
       const boton = e.target.closest('#btn-pagar');
       if (boton) {
-        alert('Gracias por tu compra en LimpiFresh.\nTu pedido está siendo procesado.');
+        window.location.href = 'pago.html';
       }
     });
   </script>
