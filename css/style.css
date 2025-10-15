@@ -60,14 +60,14 @@ body {
 .precio {
   display: block;
   margin: 50px 0;
-  color: #d46a14;
+  color: #000000;
   font-size: 20px;
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
 
 .precio-oferta {
-  color: #dc3545;
+  color: #1466a9;
   font-weight: bold;
   font-size: 2rem;
   margin-bottom: 0.2rem;
@@ -79,7 +79,7 @@ body {
 
 .precio-tachado {
   text-decoration: line-through;
-  color: #6c757d;
+  color: #ff0000;
   font-size: 1.3rem;
   margin-right: 0;
   margin-bottom: 0.5rem;
@@ -96,16 +96,6 @@ body {
   font-size: 0.8rem;
 }
 
-header {
-  background: #2a9d8f;
-  padding: 1rem;
-  color: white;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 1.5rem;
-}
 
 .nav .nav-link {
   color: white !important;
@@ -129,11 +119,11 @@ header h1 {
 .detalle-precio {
   font-size: 2.2rem;
   font-weight: bold;
-  color: #28a745;
+  color: #1466a9;
 }
 
 .detalle-precio-oferta {
-  color: #dc3545;
+  color: #1466a9;
   font-size: 2.2rem;
   font-weight: bold;
 }
@@ -176,40 +166,18 @@ header h1 {
   color: white;
 }
 
-.pie-de-pagina {
-  width: 100%;
-  background-color: #2a9d8f;
-  color: white;
-  padding: 52px 0;
-  text-align: center;
-  margin-top: 40px;
-}
-
-.contacto-footer a {
-  color: rgb(255, 255, 255);
-  text-decoration: underline;
-}
-
-.logo-footer {
-  color: white;
-  text-decoration: underline;
-}
 
 .logo-limpifresh {
   max-width: 150px;
-  /* tamaño máximo */
   width: 50%;
-  /* ancho relativo en móviles */
   height: 100%;
-  /* mantiene proporción */
   display: block;
   margin: 100px auto;
-  /* centrado vertical y horizontal */
 }
 
 /* Botón de pago del carrito  */
 .btn-pagar {
-  background-color: #2f8b82;
+  background-color: #1466a9;
   /* Verde LimpiFresh */
   color: #fff;
   font-weight: 600;
@@ -226,7 +194,7 @@ header h1 {
   color: #fff;
 }
 
-/* === Limpifresh Auth minimalista === */
+
 :root {
   --lf-primary: #2a9d8f;
   --lf-primary-dark: #207a72;
@@ -372,30 +340,6 @@ header h1 {
   }
 }
 
-/*  Barra superior  */
-header {
-  width: 100%;
-  background-color: #2a9d8f;
-  color: #fff;
-  text-align: center;
-  padding: 0.8rem 0;
-  font-size: 1.4rem;
-  letter-spacing: .5px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, .08);
-}
-
-header a {
-  color: #fff;
-  text-decoration: none;
-  /* sin subrayado */
-  font-weight: 400;
-  /* sin negrita */
-  transition: opacity .2s ease;
-}
 
 header a:hover,
 header a:focus,
@@ -423,13 +367,14 @@ header {
   color: white;
   text-align: center;
   padding: 0.8rem 0;
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   letter-spacing: 0.5px;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 header a {
@@ -720,3 +665,26 @@ body {
   place-items: center;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header.lf-navbar {
+  margin-top: 0;
+}
+
+.btn-success {
+  background-color: #3f46ff !important;
+  border-color: #3f46ff !important;
+  color: #fff !important;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-success:hover {
+  background-color: #2e34d6 !important;
+  border-color: #2e34d6 !important;
+  transform: scale(1.05);
+}

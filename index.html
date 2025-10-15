@@ -6,43 +6,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tienda de Limpieza</title>
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/contacto-limpifresh.css">
 </head>
 
 <body>
   <header class="lf-navbar navbar navbar-expand-lg navbar-dark bg-brand sticky-top shadow-sm">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="index.html">LimpiFresh</a>
+    <div class="container-fluid d-flex justify-content-between align-items-center">
 
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#lfNav"
-        aria-controls="lfNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="lfNav">
-        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 gap-lg-3">
-          <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+      <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
+        <img src="img/logo.jpg" alt="Logo LimpiFresh" width="80" height="80" class="logo-img">
+        LimpiFresh
+      </a>
+      <div class="collapse navbar-collapse justify-content-center" id="lfNav">
+        <ul class="navbar-nav mb-2 mb-lg-0 gap-lg-3">
           <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
           <li class="nav-item"><a class="nav-link" href="ofertas.html">Ofertas</a></li>
           <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
           <li class="nav-item"><a class="nav-link" href="blogs.html">Blogs</a></li>
           <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
         </ul>
-
-        <div class="d-flex align-items-center gap-2">
-          <a href="login.html" class="btn btn-light btn-sm rounded-3 d-flex align-items-center gap-1">
-            <i class="bi bi-person"></i>
-            <span class="d-none d-md-inline">Iniciar sesión</span>
-          </a>
-
-          <a href="carrito.html" class="btn btn-light btn-sm rounded-3 position-relative d-flex align-items-center gap-1">
-            <i class="bi bi-cart"></i>
-            <span class="d-none d-md-inline">Carrito</span>
-            <span id="lfCartBadge" class="badge bg-danger rounded-pill position-absolute top-0 end-0 translate-middle">3</span>
-          </a>
-        </div>
+      </div>
+      <div class="d-flex align-items-center gap-2 ms-auto">
+        <a href="login.html" class="btn btn-light btn-sm rounded-3 d-flex align-items-center gap-1">
+          <i class="bi bi-person"></i>
+          <span class="d-none d-md-inline">Iniciar sesión</span>
+        </a>
+        <a href="carrito.html" class="btn btn-light btn-sm rounded-3 position-relative d-flex align-items-center gap-1">
+          <i class="bi bi-cart"></i>
+          <span class="d-none d-md-inline">Carrito</span>
+          <span id="lfCartBadge"
+            class="badge bg-danger rounded-pill position-absolute top-0 end-0 translate-middle">3</span>
+        </a>
       </div>
     </div>
   </header>
@@ -56,9 +52,11 @@
       </p>
       <a href="productos.html" class="btn btn-primary btn-lg mt-3">Ver productos</a>
     </div>
-    <div id="marcasCarousel" class="carousel slide my-5 carousel-marcas" data-bs-ride="carousel" data-bs-interval="3500">
+    <div id="marcasCarousel" class="carousel slide my-5 carousel-marcas" data-bs-ride="carousel"
+      data-bs-interval="3500">
       <div class="carousel-indicators">
-        <button type="button" data-bs-target="#marcasCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#marcasCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+          aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#marcasCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
       </div>
       <div class="carousel-inner rounded shadow-sm">
@@ -90,7 +88,7 @@
         <span class="visually-hidden">Siguiente</span>
       </button>
     </div>
-      
+
     <hr class="my-5">
     <h2 class="text-center mb-4">PRODUCTOS QUE PODRIAN INTERESARTE</h2>
     <section class="row g-4">
@@ -98,7 +96,7 @@
         <div class="card h-100 shadow-sm">
           <img src="img/Detergente.jpg" class="card-img-top" alt="Detergente" />
           <div class="card-body text-center">
-            <h5 class="card-title">Detergente Líquido</h5>
+            <h5 class="card-title">Detergente Líquido 900ml</h5>
             <p class="card-text">Ideal para ropa y superficies.</p>
             <span class="precio">$5.990</span>
             <button class="btn btn-success" onclick="agregarAlCarrito(1)">Agregar al carrito</button>
@@ -109,7 +107,7 @@
         <div class="card h-100 shadow-sm">
           <img src="img/escoba.jpg" class="card-img-top" alt="Escoba" />
           <div class="card-body text-center">
-            <h5 class="card-title">Escoba Multiuso</h5>
+            <h5 class="card-title">Escoba Multiuso 1 Unidad</h5>
             <p class="card-text">Perfecta para interiores y exteriores.</p>
             <span class="precio">$3.500</span>
             <button class="btn btn-success" onclick="agregarAlCarrito(3)">Agregar al carrito</button>
@@ -120,7 +118,7 @@
         <div class="card h-100 shadow-sm">
           <img src="img/Cloro.jpg" class="card-img-top" alt="Cloro" />
           <div class="card-body text-center">
-            <h5 class="card-title">Cloro Desinfectante</h5>
+            <h5 class="card-title">Cloro Desinfectante 1L</h5>
             <p class="card-text">Elimina el 99.9% de bacterias.</p>
             <span class="precio">$2.000</span>
             <button class="btn btn-success" onclick="agregarAlCarrito(2)">Agregar al carrito</button>

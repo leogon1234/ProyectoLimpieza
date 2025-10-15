@@ -16,21 +16,33 @@
 </head>
 
 <body class="bg-light">
-  <header class="header-admin">
-    <div class="contenedor-header">
-      <h1 class="logo">
-        <a href="index.html">LimpiFresh</a>
-      </h1>
-      <nav class="navegacion">
-        <ul class="lista-menu">
-          <li><a href="index.html">Inicio</a></li>
-          <li><a href="nosotros.html">Nosotros</a></li>
-          <li><a href="blogs.html">Blogs</a></li>
-          <li><a href="contacto.html">Contacto</a></li>
+  <header class="lf-navbar navbar navbar-expand-lg navbar-dark bg-brand sticky-top shadow-sm">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+
+      <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
+        <img src="img/logo.jpg" alt="Logo LimpiFresh" width="80" height="80" class="logo-img">
+        LimpiFresh
+      </a>
+      <div class="collapse navbar-collapse justify-content-center" id="lfNav">
+        <ul class="navbar-nav mb-2 mb-lg-0 gap-lg-3">
+          <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
+          <li class="nav-item"><a class="nav-link" href="ofertas.html">Ofertas</a></li>
+          <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="blogs.html">Blogs</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
         </ul>
-      </nav>
-      <div class="icono-usuario">
-        <img src="img/iconoUsuario.jpg" alt="Icono de usuario">
+      </div>
+      <div class="d-flex align-items-center gap-2 ms-auto">
+        <a href="login.html" class="btn btn-light btn-sm rounded-3 d-flex align-items-center gap-1">
+          <i class="bi bi-person"></i>
+          <span class="d-none d-md-inline">Iniciar sesión</span>
+        </a>
+        <a href="carrito.html" class="btn btn-light btn-sm rounded-3 position-relative d-flex align-items-center gap-1">
+          <i class="bi bi-cart"></i>
+          <span class="d-none d-md-inline">Carrito</span>
+          <span id="lfCartBadge"
+            class="badge bg-danger rounded-pill position-absolute top-0 end-0 translate-middle">3</span>
+        </a>
       </div>
     </div>
   </header>
@@ -118,7 +130,8 @@
           </ul>
         </div>
         <div class="col-md-4">
-          <a href="index.html" class="logo-footer d-block mb-2 fw-bold fs-4 color-principal text-decoration-none">LimpiFresh</a>
+          <a href="index.html"
+            class="logo-footer d-block mb-2 fw-bold fs-4 color-principal text-decoration-none">LimpiFresh</a>
           <p class="text-muted mb-0">
             Productos de limpieza de alta calidad para tu hogar y negocio.<br>
             Soluciones ecológicas para mantener tus espacios impecables.
@@ -128,7 +141,8 @@
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    crossorigin="anonymous"></script>
   <script src="js/scripts.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
   <script src="assets/demo/chart-area-demo.js"></script>

@@ -13,39 +13,34 @@
 
 <body>
 
-    <header class="d-flex justify-content-between align-items-center px-3 py-2 header-tienda">
-        <div>
-            <h1 class="mb-0 header-titulo"><a href="index.html" class="titulo-limpifresh">LimpiFresh</a></h1>
-        </div>
-        <nav class="mx-auto">
-            <ul class="nav justify-content-center">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Inicio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="Productos.html">Productos</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="Ofertas.html">Ofertas</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-white" href="blogs.html">Blogs</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="contacto.html">Contacto</a>
-                </li>
-            </ul>
-        </nav>
-        <div class="d-flex align-items-center gap-2">
-            <a href="login.html" class="btn btn-light" title="Mi cuenta">
-                <i class="bi bi-person"></i>
+    <header class="lf-navbar navbar navbar-expand-lg navbar-dark bg-brand sticky-top shadow-sm">
+        <div class="container-fluid d-flex justify-content-between align-items-center">
+
+            <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
+                <img src="img/logo.jpg" alt="Logo LimpiFresh" width="80" height="80" class="logo-img">
+                LimpiFresh
             </a>
-            <a href="carrito.html" class="btn btn-light position-relative" id="carrito-header-btn">
-                <i class="bi bi-cart"></i>
-                <span>Carrito</span>
-                <span class="badge bg-danger position-absolute top-0 start-100 translate-middle carrito-contador-badge"
-                    id="carrito-contador">0</span>
-            </a>
+            <div class="collapse navbar-collapse justify-content-center" id="lfNav">
+                <ul class="navbar-nav mb-2 mb-lg-0 gap-lg-3">
+                    <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="ofertas.html">Ofertas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blogs.html">Blogs</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="d-flex align-items-center gap-2 ms-auto">
+                <a href="login.html" class="btn btn-light btn-sm rounded-3 d-flex align-items-center gap-1">
+                    <i class="bi bi-person"></i>
+                    <span class="d-none d-md-inline">Iniciar sesión</span>
+                </a>
+                <a href="carrito.html"
+                    class="btn btn-light btn-sm rounded-3 position-relative d-flex align-items-center gap-1">
+                    <i class="bi bi-cart"></i>
+                    <span class="d-none d-md-inline">Carrito</span>
+                    <span id="lfCartBadge"
+                        class="badge bg-danger rounded-pill position-absolute top-0 end-0 translate-middle">3</span>
+                </a>
+            </div>
         </div>
     </header>
 

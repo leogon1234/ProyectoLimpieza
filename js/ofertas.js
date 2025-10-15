@@ -46,19 +46,19 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
     const productos = [
-        { id: 1, nombre: "Detergente Líquido", img: "img/Detergente.jpg", precio: 5990, oferta: false, precioOferta: null },
-        { id: 2, nombre: "Cloro Desinfectante", img: "img/Cloro.jpg", precio: 2500, oferta: true, precioOferta: 2000 },
-        { id: 3, nombre: "Escoba Multiuso", img: "img/escoba.jpg", precio: 3500, oferta: false, precioOferta: null },
-        { id: 4, nombre: "Guantes de Limpieza", img: "img/guantes.jpg", precio: 1500, oferta: true, precioOferta: 1200 },
-        { id: 5, nombre: "Esponja Multiuso", img: "img/esponja.jpg", precio: 800, oferta: false, precioOferta: null },
-        { id: 6, nombre: "Limpiavidrios", img: "img/limpiavidrios.jpg", precio: 3000, oferta: true, precioOferta: 2500 },
-        { id: 7, nombre: "Trapo de Piso", img: "img/trapo.jpg", precio: 1000, oferta: false, precioOferta: null },
-        { id: 8, nombre: "Escobillón", img: "img/escobillon.jpg", precio: 2200, oferta: false, precioOferta: null },
-        { id: 9, nombre: "Limpiapisos", img: "img/limpiapisos.jpg", precio: 3500, oferta: true, precioOferta: 3000 },
-        { id: 10, nombre: "Cepillo de Limpieza", img: "img/cepillo.jpg", precio: 1800, oferta: false, precioOferta: null },
-        { id: 11, nombre: "Bolsas de Basura", img: "img/bolsas.jpg", precio: 1500, oferta: false, precioOferta: null },
-        { id: 12, nombre: "Limpiador Multiuso", img: "img/limpiador-multiuso.jpg", precio: 3200, oferta: true, precioOferta: 2800 },
-        { id: 13, nombre: "Anti Sarro", img: "img/anti-sarro.jpg", precio: 5000, oferta: true, precioOferta: 4500 }
+        { id: 1, nombre: "Detergente Líquido 900ml", img: "img/Detergente.jpg", precio: 5990, oferta: false, precioOferta: null },
+        { id: 2, nombre: "Cloro Desinfectante 1L", img: "img/Cloro.jpg", precio: 2500, oferta: true, precioOferta: 2000 },
+        { id: 3, nombre: "Escoba Multiuso 1 Unidad", img: "img/escoba.jpg", precio: 3500, oferta: false, precioOferta: null },
+        { id: 4, nombre: "Guantes de Limpieza 1 Par", img: "img/guantes.jpg", precio: 1500, oferta: true, precioOferta: 1200 },
+        { id: 5, nombre: "Esponja Multiuso 1 Unidad", img: "img/esponja.jpg", precio: 800, oferta: false, precioOferta: null },
+        { id: 6, nombre: "Limpiavidrios 900ml", img: "img/limpiavidrios.jpg", precio: 3000, oferta: true, precioOferta: 2500 },
+        { id: 7, nombre: "Trapo de Piso 1 Unidad", img: "img/trapo.jpg", precio: 1000, oferta: false, precioOferta: null },
+        { id: 8, nombre: "Escobillón 1 Unidad", img: "img/escobillon.jpg", precio: 2200, oferta: false, precioOferta: null },
+        { id: 9, nombre: "Limpiapisos 1 Unidad", img: "img/limpiapisos.jpg", precio: 3500, oferta: true, precioOferta: 3000 },
+        { id: 10, nombre: "Cepillo de Limpieza 1 Unidad", img: "img/cepillo.jpg", precio: 1800, oferta: false, precioOferta: null },
+        { id: 11, nombre: "Bolsas de Basura 10 Unidades", img: "img/bolsas.jpg", precio: 1500, oferta: false, precioOferta: null },
+        { id: 12, nombre: "Limpiador Multiuso 900ml", img: "img/limpiador-multiuso.jpg", precio: 3200, oferta: true, precioOferta: 2800 },
+        { id: 13, nombre: "Anti Sarro 900ml", img: "img/anti-sarro.jpg", precio: 5000, oferta: true, precioOferta: 4500 }
     ];
 
     function mostrarOfertas() {
