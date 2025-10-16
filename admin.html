@@ -3,113 +3,107 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <meta name="description" content="" />
-  <meta name="author" content="" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Administración LimpiFresh</title>
-  <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
-  <link href="css/styleAdmin.css" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css">
-  <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/styleAdmin.css" />
 
 </head>
 
 <body class="bg-light">
-  <header class="lf-navbar navbar navbar-expand-lg navbar-dark bg-brand sticky-top shadow-sm">
-    <div class="container-fluid d-flex justify-content-between align-items-center">
-
-      <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="index.html">
-        <img src="img/logo.jpg" alt="Logo LimpiFresh" width="80" height="80" class="logo-img">
-        LimpiFresh
-      </a>
-      <div class="collapse navbar-collapse justify-content-center" id="lfNav">
-        <ul class="navbar-nav mb-2 mb-lg-0 gap-lg-3">
-          <li class="nav-item"><a class="nav-link" href="productos.html">Productos</a></li>
-          <li class="nav-item"><a class="nav-link" href="ofertas.html">Ofertas</a></li>
-          <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
-          <li class="nav-item"><a class="nav-link" href="blogs.html">Blogs</a></li>
-          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
-        </ul>
+  <header class="header-admin">
+    <div class="contenedor-header">
+      <div class="logo d-flex align-items-center gap-2">
+        <img src="img/logo.jpg" alt="Logo LimpiFresh" class="logo-admin" />
+        <a href="index.html">LimpiFresh</a>
       </div>
-      <div class="d-flex align-items-center gap-2 ms-auto">
-        <a href="login.html" class="btn btn-light btn-sm rounded-3 d-flex align-items-center gap-1">
-          <i class="bi bi-person"></i>
-          <span class="d-none d-md-inline">Iniciar sesión</span>
-        </a>
-        <a href="carrito.html" class="btn btn-light btn-sm rounded-3 position-relative d-flex align-items-center gap-1">
-          <i class="bi bi-cart"></i>
-          <span class="d-none d-md-inline">Carrito</span>
-          <span id="lfCartBadge"
-            class="badge bg-danger rounded-pill position-absolute top-0 end-0 translate-middle">3</span>
-        </a>
+      <nav class="navegacion">
+        <ul class="lista-menu">
+          <li><a href="administrador.html" class="active">Panel</a></li>
+          <li><a id="btnLogout" href="index.html">Cerrar sesión</a></li>
+        </ul>
+      </nav>
+      <div class="icono-usuario" title="Admin">
+        <img src="img/admin-avatar.png" alt="Admin" onerror="this.style.display='none'">
       </div>
     </div>
   </header>
 
-  <div class="container mt-5">
+  <main class="container">
     <h1 class="text-center mb-4">Panel de Administración</h1>
 
-    <div class="card shadow-sm p-4">
+
+    <section class="card shadow-sm p-4 mb-5">
       <h2 class="mb-3">Agregar / Editar Producto</h2>
-
-      <form>
+      <form id="formProducto" autocomplete="off">
+        <input type="hidden" id="productoId" name="productoId" />
         <div class="mb-3">
-          <p class="form-label">Nombre del producto</p>
-          <input type="text" class="form-control">
+          <label for="nombre" class="form-label">Nombre del producto</label>
+          <input id="nombre" name="nombre" type="text" class="form-control" required />
         </div>
-
         <div class="mb-3">
-          <p class="form-label">Descripción</p>
-          <textarea class="form-control" rows="3"></textarea>
+          <label for="descripcion" class="form-label">Descripción</label>
+          <textarea id="descripcion" name="descripcion" class="form-control" rows="3" required></textarea>
         </div>
-
-        <div class="mb-3 row">
-          <div class="col-md-6">
-            <p class="form-label">Precio del producto</p>
-            <input type="number" class="form-control">
+        <div class="row g-3">
+          <div class="col-md-4">
+            <label for="precio" class="form-label">Precio (sin IVA)</label>
+            <input id="precio" name="precio" type="number" min="0" step="1" class="form-control" required />
           </div>
-          <div class="col-md-6">
-            <p class="form-label">Stock</p>
-            <input type="number" class="form-control">
+          <div class="col-md-4">
+            <label for="iva" class="form-label">IVA %</label>
+            <input id="iva" name="iva" type="number" min="0" step="1" class="form-control" value="19" />
+          </div>
+          <div class="col-md-4">
+            <label for="stock" class="form-label">Stock</label>
+            <input id="stock" name="stock" type="number" min="0" step="1" class="form-control" required />
           </div>
         </div>
-
-        <div class="text-end">
-          <button type="submit" class="btn btn-success">Guardar</button>
+        <div class="d-flex gap-2 justify-content-end mt-4">
+          <button type="reset" class="btn btn-outline-primary">Limpiar</button>
+          <button id="btnGuardar" type="submit" class="btn btn-primary">Guardar</button>
         </div>
       </form>
-    </div>
-  </div>
+    </section>
 
-  <div class="card mt-5 shadow-sm p-4">
-    <h4 class="mb-3">Productos</h4>
-    <table class="table table-striped">
-      <thead class="table-dark">
-        <tr>
-          <th>Nombre</th>
-          <th>Precio</th>
-          <th>IVA</th>
-          <th>Precio con IVA</th>
-          <th>Stock</th>
-          <th>Acciones</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Detergente líquido</td>
-          <td>$2500</td>
-          <td>19%</td>
-          <td>$2975</td>
-          <td>100</td>
-          <td>
-            <button class="btn btn-sm btn-primary">Editar</button>
-            <button class="btn btn-sm btn-danger">Eliminar</button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
+    <section class="card shadow-sm p-4">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <h4 class="mb-0">Productos</h4>
+        <span class="badge bg-brand text-white">IVA actual: <span id="ivaActualBadge">19%</span></span>
+      </div>
+
+      <div class="table-responsive">
+        <table id="tablaProductos" class="table table-striped align-middle">
+          <thead class="table-dark">
+            <tr>
+              <th>Nombre</th>
+              <th>Precio</th>
+              <th>IVA</th>
+              <th>Precio c/ IVA</th>
+              <th>Stock</th>
+              <th style="width: 160px;">Acciones</th>
+            </tr>
+          </thead>
+
+          <tbody id="tbodyProductos">
+
+            <tr>
+              <td>Detergente líquido</td>
+              <td>$2.500</td>
+              <td>19%</td>
+              <td>$2.975</td>
+              <td>100</td>
+              <td class="d-flex gap-2">
+                <button class="btn btn-outline-primary btn-sm" data-action="edit">Editar</button>
+                <button class="btn btn-danger btn-sm" data-action="delete">Eliminar</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </main>
 
   <footer class="bg-light text-center text-lg-start mt-5 border-top">
     <div class="container p-4">
@@ -141,16 +135,20 @@
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
-    crossorigin="anonymous"></script>
-  <script src="js/scripts.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
-  <script src="assets/demo/chart-area-demo.js"></script>
-  <script src="assets/demo/chart-bar-demo.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js"
-    crossorigin="anonymous"></script>
-  <script src="js/datatables-simple-demo.js"></script>
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="js/administrador.js"></script>
+  <script>
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const ivaInput = document.getElementById('iva');
+      const ivaBadge = document.getElementById('ivaActualBadge');
+      if (ivaInput && ivaBadge) {
+        const sync = () => ivaBadge.textContent = (ivaInput.value || 19) + '%';
+        ivaInput.addEventListener('input', sync);
+        sync();
+      }
+    });
+  </script>
 </body>
 
 </html>
