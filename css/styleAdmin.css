@@ -1,3 +1,7 @@
+/* ==========================================================
+   LIMPIFRESH - PANEL ADMIN
+   ========================================================== */
+
 /* Base general */
 :root {
   --lf-primary: var(--lf-brand, #3f46ff);
@@ -17,6 +21,9 @@ body {
   font-family: "Roboto", Arial, sans-serif;
 }
 
+/* ==========================================================
+   HEADER ADMIN (misma línea visual que la tienda)
+   ========================================================== */
 .header-admin {
   background: var(--lf-primary);
   color: #fff;
@@ -78,6 +85,9 @@ body {
   object-fit: cover;
 }
 
+/* ==========================================================
+   TARJETAS / FORMULARIOS
+   ========================================================== */
 .card {
   border: 1px solid var(--lf-border);
   border-radius: 10px;
@@ -99,6 +109,9 @@ textarea:focus {
   box-shadow: 0 0 0 0.2rem rgba(38, 78, 235, .15);
 }
 
+/* ==========================================================
+   BOTONES
+   ========================================================== */
 .btn-primary {
   background: var(--lf-primary);
   border-color: var(--lf-primary);
@@ -137,7 +150,9 @@ textarea:focus {
   transform: scale(1.05);
 }
 
-
+/* ==========================================================
+   TABLA PRODUCTOS
+   ========================================================== */
 .table thead.table-dark th {
   background: #1f1f1f;
   border-color: #1f1f1f;

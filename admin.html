@@ -1,17 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Administración LimpiFresh</title>
+
+  <!-- Estilos -->
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/styleAdmin.css" />
 
+  <!-- Sin DataTables para evitar conflictos con tu render() -->
+  <style>
+    :root{
+      /* Usa tu azul de marca del style.css si existe; si no, fallback */
+      --lf-primary: var(--lf-brand, #3f46ff);
+      --lf-primary-dark: var(--lf-brand-dark, #2e34d6);
+    }
+    .logo-admin{ width:44px;height:44px;border-radius:10px;object-fit:cover;border:2px solid rgba(255,255,255,.6); }
+    main{ margin-top:28px; }
+  </style>
 </head>
 
 <body class="bg-light">
+  <!-- Header admin con tus clases -->
   <header class="header-admin">
     <div class="contenedor-header">
       <div class="logo d-flex align-items-center gap-2">
@@ -33,7 +45,7 @@
   <main class="container">
     <h1 class="text-center mb-4">Panel de Administración</h1>
 
-
+    <!-- Formulario con IDs que espera tu JS -->
     <section class="card shadow-sm p-4 mb-5">
       <h2 class="mb-3">Agregar / Editar Producto</h2>
       <form id="formProducto" autocomplete="off">
@@ -67,6 +79,7 @@
       </form>
     </section>
 
+    <!-- Tabla: ojo con el ID del tbody -->
     <section class="card shadow-sm p-4">
       <div class="d-flex justify-content-between align-items-center mb-3">
         <h4 class="mb-0">Productos</h4>
@@ -85,9 +98,9 @@
               <th style="width: 160px;">Acciones</th>
             </tr>
           </thead>
-
+          <!-- ESTE ID ES CLAVE PARA TU JS -->
           <tbody id="tbodyProductos">
-
+            <!-- fila de ejemplo opcional; tu JS puede sembrar desde aquí si no hay localStorage -->
             <tr>
               <td>Detergente líquido</td>
               <td>$2.500</td>
@@ -124,8 +137,7 @@
           </ul>
         </div>
         <div class="col-md-4">
-          <a href="index.html"
-            class="logo-footer d-block mb-2 fw-bold fs-4 color-principal text-decoration-none">LimpiFresh</a>
+          <a href="index.html" class="logo-footer d-block mb-2 fw-bold fs-4 color-principal text-decoration-none">LimpiFresh</a>
           <p class="text-muted mb-0">
             Productos de limpieza de alta calidad para tu hogar y negocio.<br>
             Soluciones ecológicas para mantener tus espacios impecables.
@@ -135,10 +147,12 @@
     </div>
   </footer>
 
+  <!-- Scripts -->
   <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Tu lógica de admin (usa los IDs de arriba) -->
   <script src="js/administrador.js"></script>
   <script>
-
+    // Opcional: sincroniza el badge del IVA con el input
     document.addEventListener('DOMContentLoaded', () => {
       const ivaInput = document.getElementById('iva');
       const ivaBadge = document.getElementById('ivaActualBadge');
@@ -150,5 +164,4 @@
     });
   </script>
 </body>
-
 </html>
